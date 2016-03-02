@@ -1,4 +1,4 @@
-# blueprint front_end
+# blueprint CSS
 
 Farakavco front_end development convention and spacification
 
