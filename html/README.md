@@ -22,3 +22,42 @@ Table Of Content
 * Use Lower Case Element Names
 * Use Lower Case Attribute Names
 * Quote Attribute Values
+
+An example good html
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <article class="post" id="1234">
+            <time class="timestamp">March 15, 2012</time>
+            <a data-id="1234"
+             data-analytics-category="[value]"
+             data-analytics-action="[value]"
+             href="[url]">[text]</a>
+            <ul>
+                <li>
+                    <a href="[url]">[text]</a>
+                    <img src="[url]" alt="[text]">
+                </li>
+                <li>
+                    <a href="[url]">[text]</a>
+                </li>
+            </ul>
+
+            <a class="link-complex" href="[url]">
+                <span>[text]</span>
+                [text]
+            </a>
+
+            <input value="text" readonly>
+        </article>
+        <script src="main.js"></script>
+    </body>
+</html>
+```
