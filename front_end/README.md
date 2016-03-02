@@ -6,10 +6,10 @@ Farakavco front_end development convention and spacification
 
 Table Of Content 
 * [CSS Naming Convention](#user-content-css-naming-convention)
-* [CSS Preprocessor](#user-css-preprocessor)
-* [CSS Grid System](#user-css-grid-system)
-* [CSS Cross Browser](#user-css-cross-browser)
-* [CSS More Resource](#user-css-more-resource)
+* [CSS Preprocessor](#user-content-css-preprocessor)
+* [CSS Grid System](#user-content-css-grid-system)
+* [CSS Cross Browser](#user-content-css-cross-browser)
+* [CSS More Resource](#user-content-css-more-resource)
 
 ####CSS Naming Convention
 
