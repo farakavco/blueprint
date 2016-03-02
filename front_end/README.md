@@ -7,7 +7,10 @@ Farakavco front_end development convention and spacification
 Table Of Content 
 * [CSS Naming Convention](user-content-css-naming-convention)
 * [CSS Preprocessor](user-css-preprocessor)
- 
+* [CSS Grid System](user-css-grid-system)
+* [CSS Cross Browser](user-css-cross-browser)
+* [CSS More Resource](user-css-more-resource)
+
 ####CSS Naming Convention
 
 This approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language. Using proper naming will prepare you for the changes in design of the website.
@@ -61,9 +64,16 @@ Select Nested Element of Component
 
 * Using .scss format
 * Using [bourbon](http://bourbon.io/) for mixin and other helpers
+ 
+####CSS Grid System
+> Allowed grid-system tools for layout implementation is [Bootstrap Grid System](https://github.com/zirafa/bootstrap-grid-only) and [Gridle](http://gridle.org/)
+
 
 ####CSS Cross Browser
 
-*[CSS Selector and Pseudo selectors browser compatibility](https://kimblim.dk/css-tests/selectors/)
-*[Can i Use?](http://caniuse.com/)
+* [CSS Selector and Pseudo selectors browser compatibility](https://kimblim.dk/css-tests/selectors/)
+* [Can i Use?](http://caniuse.com/)
   
+####CSS More Resource
+
+* [High-level advice and guidelines for writing sane, manageable, scalable CSS](http://cssguidelin.es/)
