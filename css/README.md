@@ -1,6 +1,6 @@
 # blueprint CSS
 
-Farakavco front_end development convention and spacification
+Farakavco css convention and spacification
 
 
 
