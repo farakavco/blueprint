@@ -1,9 +1,5 @@
 # blueprint CSS
 
-Farakavco css convention and spacification
-
-
-
 Table Of Content 
 * [Naming Convention](#user-content-naming-convention)
 * [Preprocessor](#user-content-preprocessor)
