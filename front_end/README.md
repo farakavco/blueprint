@@ -23,6 +23,7 @@ This approach ensures that everyone who participates in the development of a web
  * Avoid Using Element Selector
  * Avoid Using ID selector
  * Avoid Using Abbr
+ * Rather than making up your own tricky class names to insure 100% uniqueness name components with their real understandable names.
 
 #####Description : 
  The concept of what I call Structured Components has proven to be a good one in all of the above named conventions. Structured components consist of the following elements:
