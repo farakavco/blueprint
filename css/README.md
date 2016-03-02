@@ -1,4 +1,4 @@
-# blueprint CSS
+# Blueprint CSS
 
 Table Of Content 
 * [General principles](#user-content-general-principles)
