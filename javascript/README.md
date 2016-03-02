@@ -1,1 +1,1 @@
-# blueprint JAVASCRIPT
+# blueprint JavaScript
