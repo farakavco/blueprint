@@ -23,7 +23,7 @@ Table Of Content
 * Use Lower Case Attribute Names
 * Quote Attribute Values
 
-An example good html
+An example of good html
 
 ```html
 <!DOCTYPE html>
