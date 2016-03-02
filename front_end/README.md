@@ -49,8 +49,8 @@ Select Nested Element of Component
 
 ```sh
 <div class="component-name big open" >
-     <div class="component-name--nested-element" ></div>
- </div>
+   <div class="component-name--nested-element" ></div>
+</div>
 ```
 #####Selector Sample :
 ```sh
