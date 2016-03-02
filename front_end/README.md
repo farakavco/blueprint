@@ -5,9 +5,10 @@ Farakavco front_end development convention and spacification
 > There are only two hard problems in Computer Science: cache invalidation and naming things — Phil Karlton
 
 Table Of Content 
-* [Css Naming Convention](user-content-css-naming-convention) 
+* [CSS Naming Convention](user-content-css-naming-convention)
+* [CSS Preprocessor](user-css-preprocessor)
  
-####Css Naming Convention
+####CSS Naming Convention
 
 This approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language. Using proper naming will prepare you for the changes in design of the website.
  
@@ -53,9 +54,16 @@ Select Nested Element of Component
 .message.big{} /* component with modifier  */
 .message .message--title{} /* nested element of component */
 ```
+
+####CSS Preprocessor
  
+> Allowed tools for preprocessor is [SASS](http://sass-lang.com/)
 
+* Using .scss format
+* Using [bourbon](http://bourbon.io/) for mixin and other helpers
 
+####CSS Cross Browser
 
-
+*[CSS Selector and Pseudo selectors browser compatibility](https://kimblim.dk/css-tests/selectors/)
+*[Can i Use?](http://caniuse.com/)
   
