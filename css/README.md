@@ -2,16 +2,16 @@
 
 Farakavco front_end development convention and spacification
 
-> There are only two hard problems in Computer Science: cache invalidation and naming things — Phil Karlton
+
 
 Table Of Content 
-* [CSS Naming Convention](#user-content-css-naming-convention)
-* [CSS Preprocessor](#user-content-css-preprocessor)
-* [CSS Grid System](#user-content-css-grid-system)
-* [CSS Cross Browser](#user-content-css-cross-browser)
-* [CSS More Resource](#user-content-css-more-resource)
+* [Naming Convention](#user-content-naming-convention)
+* [Preprocessor](#user-content-preprocessor)
+* [Grid System](#user-content-grid-system)
+* [Cross Browser](#user-content-cross-browser)
+* [More Resource](#user-content-more-resource)
 
-###CSS Naming Convention
+###Naming Convention
 
 This approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language. Using proper naming will prepare you for the changes in design of the website.
  
@@ -61,22 +61,22 @@ Select Nested Element of Component
 
 > *This approach inspired by [smacss](https://smacss.com/) [bem](https://en.bem.info/method/) ans customize for "few rules, more fun"*
 
-###CSS Preprocessor
+###Preprocessor
  
 > Allowed tools for preprocessor is [SASS](http://sass-lang.com/)
 
 * Using .scss format
 * Using [bourbon](http://bourbon.io/) for mixin and other helpers
  
-###CSS Grid System
+###Grid System
 > Allowed grid-system tools for layout implementation is [Bootstrap Grid System](https://github.com/zirafa/bootstrap-grid-only) and [Gridle](http://gridle.org/)
 
 
-###CSS Cross Browser
+###Cross Browser
 
 * [CSS Selector and Pseudo selectors browser compatibility](https://kimblim.dk/css-tests/selectors/)
 * [Can i Use?](http://caniuse.com/)
   
-###CSS More Resource
+###More Resource
 
 * [High-level advice and guidelines for writing sane, manageable, scalable CSS](http://cssguidelin.es/)
