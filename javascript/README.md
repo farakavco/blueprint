@@ -1,4 +1,4 @@
-# blueprint JavaScript
+# Blueprint JavaScript
 
 Table Of Content 
 * [General principles](#user-content-general-principles)
