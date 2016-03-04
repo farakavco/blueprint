@@ -6,3 +6,6 @@
  * [CSS](https://github.com/farakavco/blueprint/tree/master/css)
  * [JavaScript](https://github.com/farakavco/blueprint/tree/master/javascript)
  * [HTML](https://github.com/farakavco/blueprint/tree/master/html)
+ 
+In any team you are, it'd be better to have some *Best practice*s and use them as `Pattern` of `Workflows`. Click following links to see our suggestion on *workflow of front-end* development:
+ * [Front-end development workflow](https://github.com/farakavco/blueprint/tree/master/workflow/front-end)
