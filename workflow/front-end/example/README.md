@@ -16,9 +16,9 @@ In this example I've made a simple project and used grunt as `task-runner` and a
 
 The major benefit of using this mixture, is that grunt has a large community and has too-much many automation scripts. Three of these automation scripts are :
 
-* Uglify: This makes `JS` and `CSS` files *minified*.
-* Compass: Converts SASS to CSS.
-* Watch: Updates the result in browser while editing code. ***WOW***
+* [Uglify](https://github.com/gruntjs/grunt-contrib-uglify): This makes `JS` and `CSS` files *minified*.
+* [Compass](https://github.com/gruntjs/grunt-contrib-compass): Converts `SASS` to `CSS`.
+* [Watch](https://github.com/gruntjs/grunt-contrib-watch): Updates the result in browser while editing code. ***WOW***
 
 In addition to above benefit, we can appreciate GruntJS for having **watch**. Because gets us rid of just refreshing the page everytime something changed in the code.
 

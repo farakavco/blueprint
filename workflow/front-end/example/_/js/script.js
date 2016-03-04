@@ -1,0 +1,1 @@
+function test(){return"test"}var another=function(){var a=[99,88,77,66,55,44],b={key1:function(){return"i'm test"},keyNumber2:[1,2]};return console.log("another"),{array:a,obj:[b]}};another();
