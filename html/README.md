@@ -6,10 +6,11 @@ Table Of Content
 
 ###General principles
 * Read [idiomatic-html](https://github.com/farakavco/idiomatic-html) Before start writing html file.
-* Use Correct Document Type.
-* Avoid Long Code Lines.
+* Use Correct Document Type (`DOCTYPE`).
+* Avoid Long Code Lines and Keep line-length to a sensible maximum, e.g., 80 columns.
 * Do not add blank lines without a reason.
-* For readability, add blank lines to separate large or logical code blocks.
+For readability, add blank lines to separate large or logical code blocks.
+
 * Do not omit the 'html' and 'body' tags.
 * Avoid using inline style.
 * Avoid using "style,link,script" tag, Except for refrence to external resource.
