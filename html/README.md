@@ -8,11 +8,10 @@ Table Of Content
 * Read [idiomatic-html](https://github.com/farakavco/idiomatic-html) Before start writing html file.
 * Use Correct Document Type (`DOCTYPE`).
 * Avoid Long Code Lines and Keep line-length to a sensible maximum, e.g., 80 columns.
-* Do not add blank lines without a reason.
-For readability, add blank lines to separate large or logical code blocks.
+* Do not add blank lines without a reason. *To increase readability*, add blank lines and separate *large* or *logical* code blocks.
 
 * Do not omit the 'html' and 'body' tags.
-* Avoid using inline style.
+* Avoid using inline styles.
 * Avoid using "style,link,script" tag, Except for refrence to external resource.
 * Avoid using deprecated tags and attributes like: 'color', 'font', 'blink', 'marquee', etc.
 * Close All HTML Elements. By another means: Write `XHTML` like.
