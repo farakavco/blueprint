@@ -5,20 +5,20 @@ Table Of Content
 * [Naming Convention](#user-content-naming-convention)
 
 ###General principles
-* Read [idiomatic-html](https://github.com/farakavco/idiomatic-html) Before start writing html file
-* Use Correct Document Type
-* Avoid Long Code Lines
-* Do not add blank lines without a reason
-* For readability, add blank lines to separate large or logical code blocks
-* Do not omitting the 'html' and 'body' tags
-* Avoid using inliine style
-* Avoid using "style,link,script" tag, Except for refrence to external resource
-* Avoid using deprecated tag and attribute like: 'color' 'font' 'blink' 'marquee'
-* Close All HTML Elements
-* Put all css in head top of page
-* Put all javascript end of body
+* Read [idiomatic-html](https://github.com/farakavco/idiomatic-html) Before start writing html file.
+* Use Correct Document Type.
+* Avoid Long Code Lines.
+* Do not add blank lines without a reason.
+* For readability, add blank lines to separate large or logical code blocks.
+* Do not omit the 'html' and 'body' tags.
+* Avoid using inline style.
+* Avoid using "style,link,script" tag, Except for refrence to external resource.
+* Avoid using deprecated tags and attributes like: 'color', 'font', 'blink', 'marquee', etc.
+* Close All HTML Elements. By another means: Write `XHTML` like.
+* Put all `CSS`s (`<link>` tag) in head top of page.
+* Put all `Javascript`s (`<script>` tag) end of body.
 
-###Naming Convention 
+###Naming Conventions
 * Use Lower Case Element Names
 * Use Lower Case Attribute Names
 * Quote Attribute Values
