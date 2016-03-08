@@ -15,7 +15,7 @@ Table Of Content
 * Avoid using "style,link,script" tag, Except for refrence to external resource.
 * Avoid using deprecated tags and attributes like: 'color', 'font', 'blink', 'marquee', etc.
 * Close All HTML Elements. By another means: Write `XHTML` like.
-* Put all `CSS`s (`<link>` tag) in head top of page.
+* Put all `CSS`s (`<link>` tag) in `<head>`.
 * Put all `Javascript`s (`<script>` tag) end of body.
 
 ###Naming Conventions
