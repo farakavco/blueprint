@@ -72,3 +72,6 @@ underscore
             def my_method():
                 pass
             
+*In case of recieving two values but you need one of them
+to avoid confict with gettest import and buildin methods in class we use (___)
+ result, ___ = method()
