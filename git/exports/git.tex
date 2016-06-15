@@ -1,0 +1,931 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+%\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={},
+            pdftitle={},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+\title{GIT: Fast and Furious}
+\author{Shahab Rezaee <\href{mailto:shahabrezaee@gmail.com}{shahabrezaee@gmail.com}>}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{What is Git?}\label{what-is-git}
+
+Git is:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  A Distributed version control, means:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Each user maintain their own repository
+  \end{itemize}
+\item
+  A tool that tracks changes instead of versions, specially for text
+  content
+\end{itemize}
+
+Every single updates are \textbf{change sets} which shapes repository
+state. There is no master repository but many working copies which
+contains their own \textbf{change sets}. Example: All of the followings
+may be valid:
+
+\begin{verbatim}
+  Repo 1: A -- B -- C -- D -- E -- F
+  Repo 2: A -- B -- C
+  Repo 3: A -- B -- E -- F
+\end{verbatim}
+
+So, there is no centralized copy on server tracking every movements!
+\emph{\textbf{Goodbye dictators! Hello FREEDOM!}}
+
+Triumphs:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  No network access required
+\item
+  No single point of \emph{FAILIER}
+\item
+  Developers could works independently
+\item
+  Easier code review process
+\end{itemize}
+
+Git generally is not good for tracking binary files. So, storing many
+binary objects in git is bad habit! (see Git LFS)
+
+\section{Creation!}\label{creation}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{cd} \NormalTok{path/to/repository/root/}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{init}
+\end{Highlighting}
+\end{Shaded}
+
+See \texttt{.git} directory!
+
+Create your first files. Commit your changes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add .}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"Initial commit!"}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{-m} means message. You could use \texttt{git commit} to access
+editor to write multi line commit message. You could specify editor in
+eather \texttt{\textasciitilde{}/.bashrc} or
+\texttt{\textasciitilde{}/.bash\_profile} :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{export} \OtherTok{EDITOR=}\NormalTok{nano}
+\end{Highlighting}
+\end{Shaded}
+
+Write good messages for commits.
+(\href{http://chris.beams.io/posts/git-commit/}{How to write a Git
+Commit Message}) Use meaningful conventions such as issue numbers,
+support tickets, git refs and etc in message title.
+
+Now, see current changes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --since=}\StringTok{"2016-06-04"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --until=}\StringTok{"2016-06-04"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --author=}\StringTok{"Shahab"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --grep=}\StringTok{"Init"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{help}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{help init}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Git structure}\label{git-structure}
+
+\subsection{Git levels}\label{git-levels}
+
+\begin{verbatim}
+    +--------------+
+    |  repository  |
+  / +--------------+
+  |
+  | git commit
+  |
+  \ +-----------------+
+    |  staging index  |
+  / +-----------------+
+  |
+  | git add
+  |
+  \ +---------------------+
+    |  working directory  |
+    +---------------------+
+\end{verbatim}
+
+\subsection{Change Sets}\label{change-sets}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{change set} is a single patch file may affects many files in
+  repository.
+\item
+  Git generates a SHA-1 checksum for every \textbf{change set}.
+\item
+  SHA-1 guaranties that same data have a same checksum.
+\item
+  SHA-1 generate 40 character hexadecimal ({[}0-9a-f{]}) string.
+\end{itemize}
+
+\begin{verbatim}
+  +------------+
+  |  checksum  |
+  +------------+
+  |  parent    |
+  +------------+
+  |  author    |
+  +------------+
+  |  message   |
+  +------------+
+\end{verbatim}
+
+Example: Consider followings are initial commits of repository:
+
+\begin{verbatim}
+A -- B -- C
+\end{verbatim}
+
+thus:
+
+\begin{verbatim}
+  A.parent == NULL
+  B.parent == A.checksum
+  C.parent == B.checksum
+\end{verbatim}
+
+\subsection{HEAD}\label{head}
+
+HEAD is:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  pointer to tip of current branch of repository
+\item
+  last state of repository checked out
+\item
+  parent of next commit
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{cd} \NormalTok{.git}
+  \NormalTok{$ }\KeywordTok{ls} \CommentTok{# there is a file named HEAD}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{HEAD  }\CommentTok{# location of current head}
+  \NormalTok{$ }\KeywordTok{cd} \NormalTok{refs/heads}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{master  }\CommentTok{# checksum of lastest commit}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Create changes!}\label{create-changes}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# there is no changes}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{second.txt}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{third.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# there are untracked files (changes not staged)}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add second.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# second.txt staged to be commited, third.txt still untracked}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"Add second.txt to the project"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# third.txt is untracked}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log  }\CommentTok{# new commit is listed}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add third.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"Add third file to the project"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log  }\CommentTok{# another commit is listed}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"a new line at the end"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# first.txt is modified. changes are tracked but not staged yet}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff  }\CommentTok{# see difference between current working directory and HEAD}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"hellllllllllllllllllllo again!"} \KeywordTok{>>} \NormalTok{third.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff  }\CommentTok{# multiple file changes}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff  }\CommentTok{# Oh staged changes are not available}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff --staged  }\CommentTok{# dada! see differences between staged index and HEAD (git 1.7+, --cached for prev.)}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add third.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"Minor bottom changes ;)"}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{to_be_deleted.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"Add files to delete later"}
+  \NormalTok{$ }\KeywordTok{rm} \NormalTok{to_be_deleted.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# changes not staged}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{rm to_be_deleted.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# delete is staged to be commited}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"to_be_deleted is now deleted!"}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{return_of_to_be_deleted.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"To Be Deleted: The Return"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{rm return_of_to_be_deleted.txt}
+  \NormalTok{$ }\KeywordTok{ls}  \CommentTok{# Horay! It's gone!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# It's also staged!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"Fixing consistant to_be_deleted.txt bug"}
+  \NormalTok{$ }\KeywordTok{mv} \NormalTok{first.txt primary.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# seems first.txt is deleted (tracked), primary.txt is created (untracked)}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add primary.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{rm first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# OH! Shit! git got it! it's renamed!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{mv second.txt secondary.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# Horay! renamed and staged!}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset HEAD --hard  }\CommentTok{# we describe it later!}
+  \NormalTok{$ }\KeywordTok{nano} \NormalTok{first.txt  }\CommentTok{# change something in one line}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff --color-words first.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Time machine! Get things back or OMG! I am in love with
+Git!}\label{time-machine-get-things-back-or-omg-i-am-in-love-with-git}
+
+\subsection{From working directory to
+HEAD}\label{from-working-directory-to-head}
+
+\subsubsection{Undo changes of one file}\label{undo-changes-of-one-file}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"I gonna falllllll%@#%}\OtherTok{$#}\StringTok{^#%&"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# Next day when I check the repo: Ohhhh!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout -- first.txt  }\CommentTok{# git checkout first.txt will work on many cases but what if we have a branch called 'first.txt'! god bless '--'}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{From staged to working
+directory}\label{from-staged-to-working-directory}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"I gonna falllllll%@#%}\OtherTok{$#}\StringTok{^#%&"} \KeywordTok{>>} \NormalTok{first.txt }\KeywordTok{&&} \KeywordTok{git} \NormalTok{add first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# my god! they are staged!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset HEAD first.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{From committed to working
+directory}\label{from-committed-to-working-directory}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"I gonna falllllll%@#%}\OtherTok{$#}\StringTok{^#%&"} \KeywordTok{>>} \NormalTok{first.txt }\KeywordTok{&&} \KeywordTok{git} \NormalTok{commit -am }\StringTok{"sombjhgsv f hsafhi fbuf"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log  }\CommentTok{# HOLY CRAP! They are commited}
+\end{Highlighting}
+\end{Shaded}
+
+Consider this:
+
+\begin{verbatim}
+  A -- B -- C -- D -- E
+\end{verbatim}
+
+We already know that each commit is depends to the previous commit. So
+if we remove one, repository would loose its data integrety. However, we
+may able to change the last commit!
+
+\subsubsection{Change last commit}\label{change-last-commit}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -amend -m }\StringTok{"A nice good morning message!"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# Nothing!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log  }\CommentTok{# message of last commit is looking nice! Note that checksum and date are change too.}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"one more other line"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"one more other line"} \KeywordTok{>>} \NormalTok{second.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -m }\StringTok{"Append one more line to first and second"}  \CommentTok{# oops! we forgot second one!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add second.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit --amend --no-edit  }\CommentTok{# Save or change message! Done!}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Bring commited changes out of
+commit}\label{bring-commited-changes-out-of-commit}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout CHECKSUM -- first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset HEAD first.txt}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Revert last commit!}\label{revert-last-commit}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout -- first.txt  }\CommentTok{# Back to last commit}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{revert CHECKSUM  }\CommentTok{# revert last commit: git revert HEAD}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log  }\CommentTok{# a revert commit!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{revert CHECKSUM  }\CommentTok{# try to revert to older commits may cause confilicts}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{revert --abort  }\CommentTok{# return to last state}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{To infinity\ldots{} and
+beyond!}\label{to-infinity-and-beyond}
+
+There are three kind of reset:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  soft: no changes in niether staged index nor working directory
+\item
+  mixed (default): change staged index to match HEAD but apply no
+  changes to the working directory
+\item
+  hard: change both staged index and working directory to match HEAD
+\end{itemize}
+
+\subsubsection{Soft reset}\label{soft-reset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/HEAD}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/refs/heads/master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --soft CHECKSUM}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff --staged}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/refs/heads/master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --soft CHECKSUM_OF_LATESET  }\CommentTok{# it's not destructive}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Mixed reset}\label{mixed-reset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --mixed CHECKSUM}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# committed changes are unstaged now}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add .}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset HEAD FILENAME}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --mixed CHECKSUM_OF_LATESET  }\CommentTok{# it's not destructive too}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Hard reset}\label{hard-reset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard CHECKSUM}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# Nothing here!}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"this would be gone!"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard HEAD}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# nothing here! may be destructive or painful!}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard CHECKSUM_OF_LATESET  }\CommentTok{# it's here again but we are lucky because it's not collected yet!}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Reset the Reset}\label{reset-the-reset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reflog  }\CommentTok{# git help reflog}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard HEAD~3}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reflog}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard HEAD@}\DataTypeTok{\{1\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{From dirty to clean!}\label{from-dirty-to-clean}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{jerk1.txt}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{jerk2.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{clean}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{clean -n  }\CommentTok{# Test run of clean command}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{add jerk1.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{clean -f  }\CommentTok{# jerk1.txt still here}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset HAED jerk1.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{clean -f}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Ignorance!}\label{ignorance}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{to_be_ignored.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{.gitignore}
+\end{Highlighting}
+\end{Shaded}
+
+.gitignore accept patterns in each line:
+
+\begin{itemize}
+\item
+  Very basic regular experssins * ? {[}aeiou{]} {[}0-9{]}
+\item
+  \texttt{!} means NOT! Example: \texttt{*.jpg     !logo.jpg}
+\item
+  Triling slash ignores directoris: \texttt{static/}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"*_ignored.*"} \KeywordTok{>>} \NormalTok{.gitignore}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status  }\CommentTok{# It's ignored}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"add gitignore"}
+\end{Highlighting}
+\end{Shaded}
+
+See \href{https://github.com/github/gitignore}{github .gitignores} You
+could create global ignorance with \texttt{git config}.
+
+Now if we want to ignore tracked files:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"third.txt"} \KeywordTok{>>} \NormalTok{.gitignore}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"some changes!"} \KeywordTok{>>} \NormalTok{third.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{rm --cached third.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"Untrack third.txt but still available from repository"}
+\end{Highlighting}
+\end{Shaded}
+
+Git ignores empty directories by default, so if you want add an empty
+directory to project add \texttt{.gitkeep} to it!
+
+\section{Go to a git trip!}\label{go-to-a-git-trip}
+
+Every Tree-ish are a git trip ticket! But wait a min! What is a
+Tree-ish:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  something that references part of a tree
+\item
+  is \texttt{ish} because it's vary widly
+\item
+  is referencing a commit
+\end{itemize}
+
+Tree-ish:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Full 40 char checksum
+\item
+  Part of checksum (4 char at least) from left.
+\item
+  HEAD pointer
+\item
+  branch refs
+\item
+  tags refs
+\item
+  ancestry
+\end{itemize}
+
+Ancestry:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Parent commit:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{HEAD\^{}}, \texttt{1f9c5bb\^{}}, \texttt{master\^{}}
+  \item
+    \texttt{HEAD\textasciitilde{}1}, \texttt{HEAD\textasciitilde{}}
+  \end{itemize}
+\item
+  Grandparent Commit:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{HEAD\^{}\^{}}, \texttt{1f9c5bb\^{}\^{}},
+    \texttt{master\^{}\^{}}
+  \item
+    \texttt{HEAD\textasciitilde{}2}
+  \end{itemize}
+\item
+  Great-grandparent commit:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \texttt{HEAD\^{}\^{}\^{}}, \texttt{1f9c5bb\^{}\^{}\^{}},
+    \texttt{master\^{}\^{}\^{}}
+  \item
+    \texttt{HEAD\textasciitilde{}3}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Tree-ish contents}\label{tree-ish-contents}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{ls-tree HEAD}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{ls-tree --name-only}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{show HEAD}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{show CHECKSUM_OF_BLOB}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{show first.txt  }\CommentTok{# ambiguous}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff HEAD~2..HEAD}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff --stat HEAD~2..HEAD}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff -b TREEISH..TREEISH  }\CommentTok{# ignores space changes}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff -w TREEISH..TREEISH  }\CommentTok{# ignores all spaces}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Logs}\label{logs}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --since=}\StringTok{"2 days ago"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --until=2.days}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log HEAD~5..HEAD~}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log -- first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --stat --summary}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --format=short}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --graph --decorate}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Branches}\label{branches}
+
+\subsection{Create, Move and Delete}\label{create-move-and-delete}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch new_feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{brance}
+  \NormalTok{$ }\KeywordTok{ls} \NormalTok{-la .git/refs/heads}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/refs/heads/new_feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout new_feature}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/HEAD}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"in new branch"} \KeywordTok{>>} \NormalTok{second.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"new feature aded"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout new_feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout -b feature_hotfix}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"it is too hoooooooot"} \KeywordTok{>>} \NormalTok{second.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"it's feel warmer now"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --graph --decorate --all}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"some annoing not commited"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout new_feature  }\CommentTok{# Cause error! It should be mostly clean}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard HEAD}
+  \NormalTok{$ }\KeywordTok{touch} \NormalTok{temp.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout new_feature  }\CommentTok{# this is the meaning of 'mostly clean'}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{status}
+  \NormalTok{$ }\KeywordTok{rm} \NormalTok{temp.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff master..new_feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch --merged}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -m new_feature feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch delete_me}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -d delete_me}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout -b delete_again}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"this will be deleted"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"rest in peace"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -d delete_again  }\CommentTok{# Are you sure?}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -D delete_again}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Merge}\label{merge}
+
+\begin{verbatim}
+      A---B---C   [feature]
+     /
+    D---E---F---G---H   [master]
+
+      A---B---C   [feature]
+     /         \
+    D---E---F---G---H   [master]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{merge feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{merge --no-ff hotfix}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch --merged}
+\end{Highlighting}
+\end{Shaded}
+
+Strategies to avoid conflicts: - Keep lins short - keep commit short -
+merge often
+
+\section{Stash}\label{stash}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"I am editing this file"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stach save }\StringTok{"some changes"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash list}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash show REF}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash show -p REF}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash pop REF}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash list}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash list}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash apply REF}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash list}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash drop REF}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{stash clear}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Remotes}\label{remotes}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{remote add origin URL}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/config}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{remote}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{remote -v}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/config}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{remote rm origin}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{remote add origin URL}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{push -u origin master}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/config}
+  \NormalTok{$ }\KeywordTok{ls} \NormalTok{.git/refs/remote}
+  \NormalTok{$ }\KeywordTok{ls} \NormalTok{.git/refs/remote/origin}
+  \NormalTok{$ }\KeywordTok{cat} \NormalTok{.git/refs/remote/master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -r}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -a}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{diff master origin/master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{merge origin/feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{push origin :delete_me}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{push origin --delete delete_me}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Rebase}\label{rebase}
+
+\begin{verbatim}
+          A---B---C   [feature]
+         /
+    D---E---F---G   [master]
+
+                  A'--B'--C'   [feature]
+                 /
+    D---E---F---G   [master]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout -b extra_feature master}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"landing giant boeing"} \KeywordTok{>>} \NormalTok{first.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"initial commit -- extra feature"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout -b hotfix_chili master}
+  \NormalTok{$ }\KeywordTok{echo} \StringTok{"An chili pepper here!"} \KeywordTok{>>} \NormalTok{second.txt}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{commit -am }\StringTok{"fix a hot a possible"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{merge hotfix_chili}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{branch -d hotfix_chili}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --decorate}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{checkout extra_feature}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --decorate}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{rebase master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --decorate}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reflog}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reset --hard HEAD@}\DataTypeTok{\{NUM\}}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{rebase -i master}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{push -f origin extra_feature  }\CommentTok{# should push forcefully}
+\end{Highlighting}
+\end{Shaded}
+
+The Golden Rule of Rebasing: \textbf{Once you understand what rebasing
+is, the most important thing to learn is when not to do it. The golden
+rule of git rebase is to never use it on public branches.} see:
+\href{https://www.atlassian.com/git/tutorials/merging-vs-rebasing}{Merge
+vs Rebase}
+
+\section{Tagging}\label{tagging}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --decorate}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{tag v0.1.0}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{tag}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{show v0.1.0}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{tag -a v0.1.0rc HAED~1 -m }\StringTok{"First RC realse"}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{log --oneline --decorate}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{reflog}
+  \NormalTok{$ }\KeywordTok{git} \NormalTok{push origin --tags}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Git workflow}\label{git-workflow}
+
+see:
+\href{https://www.atlassian.com/git/tutorials/comparing-workflows/}{Comparing
+Workflows}
+
+\subsection{Centralized Workflow}\label{centralized-workflow}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Everyone works on master!
+\item
+  Needs many rebases
+\item
+  Confilicts are totaly accepted!
+\item
+  Only one branch make the way clean (!?)
+\end{itemize}
+
+\subsection{Feature Branch Workflow}\label{feature-branch-workflow}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Every feature have thier own brach
+\item
+  Based on pull requests
+\item
+  Less confilicts may happens
+\item
+  There may be many waits for a branch owner to finish their work
+\end{itemize}
+
+\subsection{Gitflow Workflow}\label{gitflow-workflow}
+
+see: \href{http://nvie.com/posts/a-successful-git-branching-model/}{A
+successful Git branching model}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  There are 5 basic branch type:
+\item
+  master: stable release
+\item
+  develop: main development branch
+\item
+  feature: branch for new feature development
+\item
+  release: branch from develop for every single feature releases
+  e.g.~1.5.2 -\textgreater{} 1.6 not 1.5.3 nor 2.0
+\item
+  hotfix: branch from master to apply hotfixes to master
+\item
+  Compatible with \href{http://semver.org/}{semver}
+\item
+  Rare confilicts
+\item
+  Descentralized while Centralized
+\item
+  Very collaborative atmosphere
+\item
+  Never breaks stable releases
+\item
+  A bit complex to handle, nevertheless there is a handy automation tool
+\end{itemize}
+
+\href{https://github.com/nvie/gitflow}{git-flow} is a tool to automate
+this model. see:
+\href{http://danielkummer.github.io/git-flow-cheatsheet/}{git-flow
+cheatsheet}
+
+\subsection{Forking Workflow}\label{forking-workflow}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Every member works on thier own copy of repository (fork)
+\item
+  Based on pull requests
+\item
+  There is a maintainer responsible to merge everything
+\item
+  Prevents unwanted changes to main repository
+\item
+  Usually opensource/public projects use this model
+\end{itemize}
+
+\subsection{Patch Workflow}\label{patch-workflow}
+
+see: \href{http://rypress.com/tutorials/git/patch-workflows}{Patch
+Workflows}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Every member works on thier own copy of repository (fork)
+\item
+  Based on emailed patches! (see:
+  \href{https://git-scm.com/book/en/v2/Git-Commands-Email}{A3.9 Git
+  Commands - Email})
+\item
+  There is a maintainer responsible to merge everything
+\item
+  Linux Kernel uses this model!
+\end{itemize}
+
+\end{document}

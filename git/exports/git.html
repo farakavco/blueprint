@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>git.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}.github{padding:20px;font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Segoe UI",AppleSDGothicNeo-Medium,'Malgun Gothic',Arial,freesans,sans-serif;font-size:15px;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.github a{color:#3269a0}.github a:hover{color:#4183c4}.github h2{border-bottom:1px solid #e6e6e6;line-height:1.6}.github h6{color:#777}.github hr{border:1px solid #e6e6e6}.github pre>code{font-size:.9em;font-family:Consolas,Inconsolata,Courier,monospace}.github blockquote>code,.github h1>code,.github h2>code,.github h3>code,.github h4>code,.github h5>code,.github h6>code,.github li>code,.github p>code,.github td>code{background-color:rgba(0,0,0,.07);font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;padding:.2em .5em;border:0}.github blockquote{border-left:4px solid #e6e6e6;padding:0 15px;font-style:italic}.github table{background-color:#fafafa}.github table tr td,.github table tr th{border:1px solid #e6e6e6}.github table tr:nth-child(2n){background-color:#f2f2f2}.hljs-comment{color:#7285b7}.css .hljs-class,.css .hljs-id,.css .hljs-pseudo,.hljs-attribute,.hljs-regexp,.hljs-tag,.hljs-variable,.html .hljs-doctype,.ruby .hljs-constant,.xml .hljs-doctype,.xml .hljs-pi,.xml .hljs-tag .hljs-title{color:#ff9da4}.hljs-built_in,.hljs-constant,.hljs-literal,.hljs-number,.hljs-params,.hljs-pragma,.hljs-preprocessor{color:#ffc58f}.css .hljs-rules .hljs-attribute,.ruby .hljs-class .hljs-title{color:#ffeead}.hljs-header,.hljs-inheritance,.hljs-string,.hljs-value,.ruby .hljs-symbol,.xml .hljs-cdata{color:#d1f1a9}.css .hljs-hexcolor,.hljs-title{color:#9ff}.coffeescript .hljs-title,.hljs-function,.javascript .hljs-title,.perl .hljs-sub,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword{color:#bbdaff}.hljs-keyword,.javascript .hljs-function{color:#ebbbff}.hljs{display:block;overflow-x:auto;background:#002451;color:#fff;padding:.5em;-webkit-text-size-adjust:none}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .css,.xml .hljs-cdata,.xml .javascript,.xml .vbscript{opacity:.5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:5px 0;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-khtml-border-radius:5px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:1px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:.7em}.MathJax_MenuRadioCheck.RTL{right:.7em;left:auto}.MathJax_MenuLabel{padding:1px 2em 3px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #DDD;margin:4px 3px}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:#606872;color:#fff}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown github">
+<h6 id="git:-fast-and-furious"><a name="git:-fast-and-furious" href="#git:-fast-and-furious"></a>GIT: Fast and Furious</h6><h6 id="shahab-rezaee"><a name="shahab-rezaee" href="#shahab-rezaee"></a>Shahab Rezaee <a href="mailto:shahabrezaee@gmail.com">shahabrezaee@gmail.com</a></h6><h1 id="what-is-git?"><a name="what-is-git?" href="#what-is-git?"></a>What is Git?</h1><p>Git is:</p><ul>
+<li>A Distributed version control, means:<ul>
+<li>Each user maintain their own repository</li></ul>
+</li><li>A tool that tracks changes instead of versions, specially for text content</li></ul><p>Every single updates are <strong>change sets</strong> which shapes repository state.<br>There is no master repository but many working copies which contains their own <strong>change sets</strong>.<br>Example: All of the followings may be valid:</p><pre><code data-origin="<pre><code>  Repo 1: A -- B -- C -- D -- E -- F
+  Repo 2: A -- B -- C
+  Repo 3: A -- B -- E -- F
+</code></pre>">  Repo 1: A -- B -- C -- D -- E -- F
+  Repo 2: A -- B -- C
+  Repo 3: A -- B -- E -- F
+</code></pre><p>So, there is no centralized copy on server tracking every movements! <em><strong>Goodbye dictators! Hello FREEDOM!</strong></em></p><p>Triumphs:</p><ul>
+<li>No network access required</li><li>No single point of <em>FAILIER</em></li><li>Developers could works independently</li><li>Easier code review process</li></ul><p>Git generally is not good for tracking binary files. So, storing many binary objects in git is bad habit! (see Git LFS)</p><h1 id="creation!"><a name="creation!" href="#creation!"></a>Creation!</h1><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ cd path/to/repository/root/
+  $ git init
+</code></pre>">  $ <span class="hljs-built_in">cd</span> path/to/repository/root/
+  $ git init
+</code></pre><p>See <code>.git</code> directory!</p><p>Create your first files.<br>Commit your changes.</p><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ touch first.txt
+  $ git add .
+  $ git commit -m &quot;Initial commit!&quot;
+</code></pre>">  $ touch first.txt
+  $ git add .
+  $ git commit -m <span class="hljs-string">"Initial commit!"</span>
+</code></pre><p><code>-m</code> means message.<br>You could use <code>git commit</code> to access editor to write multi line commit message.<br>You could specify editor in eather <code>~/.bashrc</code> or <code>~/.bash_profile</code> :</p><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>export EDITOR=nano
+</code></pre>"><span class="hljs-built_in">export</span> EDITOR=nano
+</code></pre><p>Write good messages for commits. (<a href="http://chris.beams.io/posts/git-commit/">How to write a Git Commit Message</a>)<br>Use meaningful conventions such as issue numbers, support tickets, git refs and etc in message title.</p><p>Now, see current changes:</p><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git log
+  $ git log --since=&quot;2016-06-04&quot;
+  $ git log --until=&quot;2016-06-04&quot;
+  $ git log --author=&quot;Shahab&quot;
+  $ git log --grep=&quot;Init&quot;
+</code></pre>">  $ git <span class="hljs-built_in">log</span>
+  $ git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">"2016-06-04"</span>
+  $ git <span class="hljs-built_in">log</span> --until=<span class="hljs-string">"2016-06-04"</span>
+  $ git <span class="hljs-built_in">log</span> --author=<span class="hljs-string">"Shahab"</span>
+  $ git <span class="hljs-built_in">log</span> --grep=<span class="hljs-string">"Init"</span>
+</code></pre><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git help
+  $ git help init
+</code></pre>">  $ git <span class="hljs-built_in">help</span>
+  $ git <span class="hljs-built_in">help</span> init
+</code></pre><h1 id="git-structure"><a name="git-structure" href="#git-structure"></a>Git structure</h1><h2 id="git-levels"><a name="git-levels" href="#git-levels"></a>Git levels</h2><pre><code data-origin="<pre><code>    +--------------+
+    |  repository  |
+  / +--------------+
+  |
+  | git commit
+  |
+  \ +-----------------+
+    |  staging index  |
+  / +-----------------+
+  |
+  | git add
+  |
+  \ +---------------------+
+    |  working directory  |
+    +---------------------+
+</code></pre>">    +--------------+
+    |  repository  |
+  / +--------------+
+  |
+  | git commit
+  |
+  \ +-----------------+
+    |  staging index  |
+  / +-----------------+
+  |
+  | git add
+  |
+  \ +---------------------+
+    |  working directory  |
+    +---------------------+
+</code></pre><h2 id="change-sets"><a name="change-sets" href="#change-sets"></a>Change Sets</h2><ul>
+<li><strong>change set</strong> is a single patch file may affects many files in repository.</li><li>Git generates a SHA-1 checksum for every <strong>change set</strong>.</li><li>SHA-1 guaranties that same data have a same checksum.</li><li>SHA-1 generate 40 character hexadecimal ([0-9a-f]) string.</li></ul><pre><code data-origin="<pre><code>  +------------+
+  |  checksum  |
+  +------------+
+  |  parent    |
+  +------------+
+  |  author    |
+  +------------+
+  |  message   |
+  +------------+
+</code></pre>">  +------------+
+  |  checksum  |
+  +------------+
+  |  parent    |
+  +------------+
+  |  author    |
+  +------------+
+  |  message   |
+  +------------+
+</code></pre><p>Example: Consider followings are initial commits of repository:</p><pre><code data-origin="<pre><code>A -- B -- C
+</code></pre>">A -- B -- C
+</code></pre><p>thus:</p><pre><code data-origin="<pre><code>  A.parent == NULL
+  B.parent == A.checksum
+  C.parent == B.checksum
+</code></pre>">  A.parent == NULL
+  B.parent == A.checksum
+  C.parent == B.checksum
+</code></pre><h2 id="head"><a name="head" href="#head"></a>HEAD</h2><p>HEAD is:</p><ul>
+<li>pointer to tip of current branch of repository</li><li>last state of repository checked out</li><li>parent of next commit</li></ul><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ cd .git
+  $ ls # there is a file named HEAD
+  $ cat HEAD  # location of current head
+  $ cd refs/heads
+  $ cat master  # checksum of lastest commit
+</code></pre>">  $ <span class="hljs-built_in">cd</span> .git
+  $ ls <span class="hljs-comment"># there is a file named HEAD</span>
+  $ cat HEAD  <span class="hljs-comment"># location of current head</span>
+  $ <span class="hljs-built_in">cd</span> refs/heads
+  $ cat master  <span class="hljs-comment"># checksum of lastest commit</span>
+</code></pre><h1 id="create-changes!"><a name="create-changes!" href="#create-changes!"></a>Create changes!</h1><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git status  # there is no changes
+  $ touch second.txt
+  $ touch third.txt
+  $ git status  # there are untracked files (changes not staged)
+  $ git add second.txt
+  $ git status  # second.txt staged to be commited, third.txt still untracked
+  $ git commit -m &quot;Add second.txt to the project&quot;
+  $ git status  # third.txt is untracked
+  $ git log  # new commit is listed
+  $ git add third.txt
+  $ git commit -m &quot;Add third file to the project&quot;
+  $ git log  # another commit is listed
+  $ echo &quot;a new line at the end&quot; &amp;gt;&amp;gt; first.txt
+  $ git status  # first.txt is modified. changes are tracked but not staged yet
+  $ git diff  # see difference between current working directory and HEAD
+  $ echo &quot;hellllllllllllllllllllo again!&quot; &amp;gt;&amp;gt; third.txt
+  $ git diff  # multiple file changes
+  $ git add first.txt
+  $ git diff  # Oh staged changes are not available
+  $ git diff --staged  # dada! see differences between staged index and HEAD (git 1.7+, --cached for prev.)
+  $ git add third.txt
+  $ git commit -m &quot;Minor bottom changes ;)&quot;
+  $ touch to_be_deleted.txt
+  $ git commit -am &quot;Add files to delete later&quot;
+  $ rm to_be_deleted.txt
+  $ git status  # changes not staged
+  $ git rm to_be_deleted.txt
+  $ git status  # delete is staged to be commited
+  $ git commit -m &quot;to_be_deleted is now deleted!&quot;
+  $ touch return_of_to_be_deleted.txt
+  $ git commit -am &quot;To Be Deleted: The Return&quot;
+  $ git rm return_of_to_be_deleted.txt
+  $ ls  # Horay! It's gone!
+  $ git status  # It's also staged!
+  $ git commit -m &quot;Fixing consistant to_be_deleted.txt bug&quot;
+  $ mv first.txt primary.txt
+  $ git status  # seems first.txt is deleted (tracked), primary.txt is created (untracked)
+  $ git add primary.txt
+  $ git rm first.txt
+  $ git status  # OH! Shit! git got it! it's renamed!
+  $ git mv second.txt secondary.txt
+  $ git status  # Horay! renamed and staged!
+</code></pre>">  $ git status  <span class="hljs-comment"># there is no changes</span>
+  $ touch second.txt
+  $ touch third.txt
+  $ git status  <span class="hljs-comment"># there are untracked files (changes not staged)</span>
+  $ git add second.txt
+  $ git status  <span class="hljs-comment"># second.txt staged to be commited, third.txt still untracked</span>
+  $ git commit -m <span class="hljs-string">"Add second.txt to the project"</span>
+  $ git status  <span class="hljs-comment"># third.txt is untracked</span>
+  $ git <span class="hljs-built_in">log</span>  <span class="hljs-comment"># new commit is listed</span>
+  $ git add third.txt
+  $ git commit -m <span class="hljs-string">"Add third file to the project"</span>
+  $ git <span class="hljs-built_in">log</span>  <span class="hljs-comment"># another commit is listed</span>
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"a new line at the end"</span> &gt;&gt; first.txt
+  $ git status  <span class="hljs-comment"># first.txt is modified. changes are tracked but not staged yet</span>
+  $ git diff  <span class="hljs-comment"># see difference between current working directory and HEAD</span>
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"hellllllllllllllllllllo again!"</span> &gt;&gt; third.txt
+  $ git diff  <span class="hljs-comment"># multiple file changes</span>
+  $ git add first.txt
+  $ git diff  <span class="hljs-comment"># Oh staged changes are not available</span>
+  $ git diff --staged  <span class="hljs-comment"># dada! see differences between staged index and HEAD (git 1.7+, --cached for prev.)</span>
+  $ git add third.txt
+  $ git commit -m <span class="hljs-string">"Minor bottom changes ;)"</span>
+  $ touch to_be_deleted.txt
+  $ git commit -am <span class="hljs-string">"Add files to delete later"</span>
+  $ rm to_be_deleted.txt
+  $ git status  <span class="hljs-comment"># changes not staged</span>
+  $ git rm to_be_deleted.txt
+  $ git status  <span class="hljs-comment"># delete is staged to be commited</span>
+  $ git commit -m <span class="hljs-string">"to_be_deleted is now deleted!"</span>
+  $ touch <span class="hljs-built_in">return</span>_of_to_be_deleted.txt
+  $ git commit -am <span class="hljs-string">"To Be Deleted: The Return"</span>
+  $ git rm <span class="hljs-built_in">return</span>_of_to_be_deleted.txt
+  $ ls  <span class="hljs-comment"># Horay! It's gone!</span>
+  $ git status  <span class="hljs-comment"># It's also staged!</span>
+  $ git commit -m <span class="hljs-string">"Fixing consistant to_be_deleted.txt bug"</span>
+  $ mv first.txt primary.txt
+  $ git status  <span class="hljs-comment"># seems first.txt is deleted (tracked), primary.txt is created (untracked)</span>
+  $ git add primary.txt
+  $ git rm first.txt
+  $ git status  <span class="hljs-comment"># OH! Shit! git got it! it's renamed!</span>
+  $ git mv second.txt secondary.txt
+  $ git status  <span class="hljs-comment"># Horay! renamed and staged!</span>
+</code></pre><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git reset HEAD --hard  # we describe it later!
+  $ nano first.txt  # change something in one line
+  $ git diff first.txt
+  $ git diff --color-words first.txt
+</code></pre>">  $ git reset HEAD --hard  <span class="hljs-comment"># we describe it later!</span>
+  $ nano first.txt  <span class="hljs-comment"># change something in one line</span>
+  $ git diff first.txt
+  $ git diff --color-words first.txt
+</code></pre><h1 id="time-machine!-get-things-back-or-omg!-i-am-in-love-with-git!"><a name="time-machine!-get-things-back-or-omg!-i-am-in-love-with-git!" href="#time-machine!-get-things-back-or-omg!-i-am-in-love-with-git!"></a>Time machine! Get things back or OMG! I am in love with Git!</h1><h2 id="from-working-directory-to-head"><a name="from-working-directory-to-head" href="#from-working-directory-to-head"></a>From working directory to HEAD</h2><h3 id="undo-changes-of-one-file"><a name="undo-changes-of-one-file" href="#undo-changes-of-one-file"></a>Undo changes of one file</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ echo &quot;I gonna falllllll%@#%$#^#%&amp;amp;&quot; &amp;gt;&amp;gt; first.txt
+  $ git status  # Next day when I check the repo: Ohhhh!
+  $ git checkout -- first.txt  # git checkout first.txt will work on many cases but what if we have a branch called 'first.txt'! god bless '--'
+</code></pre>">  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"I gonna falllllll%@#%<span class="hljs-variable">$#</span>^#%&amp;"</span> &gt;&gt; first.txt
+  $ git status  <span class="hljs-comment"># Next day when I check the repo: Ohhhh!</span>
+  $ git checkout -- first.txt  <span class="hljs-comment"># git checkout first.txt will work on many cases but what if we have a branch called 'first.txt'! god bless '--'</span>
+</code></pre><h2 id="from-staged-to-working-directory"><a name="from-staged-to-working-directory" href="#from-staged-to-working-directory"></a>From staged to working directory</h2><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ echo &quot;I gonna falllllll%@#%$#^#%&amp;amp;&quot; &amp;gt;&amp;gt; first.txt &amp;amp;&amp;amp; git add first.txt
+  $ git status  # my god! they are staged!
+  $ git reset HEAD first.txt
+</code></pre>">  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"I gonna falllllll%@#%<span class="hljs-variable">$#</span>^#%&amp;"</span> &gt;&gt; first.txt &amp;&amp; git add first.txt
+  $ git status  <span class="hljs-comment"># my god! they are staged!</span>
+  $ git reset HEAD first.txt
+</code></pre><h2 id="from-committed-to-working-directory"><a name="from-committed-to-working-directory" href="#from-committed-to-working-directory"></a>From committed to working directory</h2><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ echo &quot;I gonna falllllll%@#%$#^#%&amp;amp;&quot; &amp;gt;&amp;gt; first.txt &amp;amp;&amp;amp; git commit -am &quot;sombjhgsv f hsafhi fbuf&quot;
+  $ git status
+  $ git log  # HOLY CRAP! They are commited
+</code></pre>">  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"I gonna falllllll%@#%<span class="hljs-variable">$#</span>^#%&amp;"</span> &gt;&gt; first.txt &amp;&amp; git commit -am <span class="hljs-string">"sombjhgsv f hsafhi fbuf"</span>
+  $ git status
+  $ git <span class="hljs-built_in">log</span>  <span class="hljs-comment"># HOLY CRAP! They are commited</span>
+</code></pre><p>Consider this:</p><pre><code data-origin="<pre><code>  A -- B -- C -- D -- E
+</code></pre>">  A -- B -- C -- D -- E
+</code></pre><p>We already know that each commit is depends to the previous commit. So if we remove one, repository would loose its data integrety. However, we may able to change the last commit!</p><h3 id="change-last-commit"><a name="change-last-commit" href="#change-last-commit"></a>Change last commit</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git commit -amend -m &quot;A nice good morning message!&quot;
+  $ git status  # Nothing!
+  $ git log  # message of last commit is looking nice! Note that checksum and date are change too.
+  $ echo &quot;one more other line&quot; &amp;gt;&amp;gt; first.txt
+  $ echo &quot;one more other line&quot; &amp;gt;&amp;gt; second.txt
+  $ git add first.txt
+  $ git commit -m &quot;Append one more line to first and second&quot;  # oops! we forgot second one!
+  $ git add second.txt
+  $ git commit --amend --no-edit  # Save or change message! Done!
+</code></pre>">  $ git commit -amend -m <span class="hljs-string">"A nice good morning message!"</span>
+  $ git status  <span class="hljs-comment"># Nothing!</span>
+  $ git <span class="hljs-built_in">log</span>  <span class="hljs-comment"># message of last commit is looking nice! Note that checksum and date are change too.</span>
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"one more other line"</span> &gt;&gt; first.txt
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"one more other line"</span> &gt;&gt; second.txt
+  $ git add first.txt
+  $ git commit -m <span class="hljs-string">"Append one more line to first and second"</span>  <span class="hljs-comment"># oops! we forgot second one!</span>
+  $ git add second.txt
+  $ git commit --amend --no-edit  <span class="hljs-comment"># Save or change message! Done!</span>
+</code></pre><h3 id="bring-commited-changes-out-of-commit"><a name="bring-commited-changes-out-of-commit" href="#bring-commited-changes-out-of-commit"></a>Bring commited changes out of commit</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git checkout CHECKSUM -- first.txt
+  $ git status
+  $ git reset HEAD first.txt
+</code></pre>">  $ git checkout CHECKSUM -- first.txt
+  $ git status
+  $ git reset HEAD first.txt
+</code></pre><h3 id="revert-last-commit!"><a name="revert-last-commit!" href="#revert-last-commit!"></a>Revert last commit!</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git checkout -- first.txt  # Back to last commit
+  $ git log
+  $ git revert CHECKSUM  # revert last commit: git revert HEAD
+  $ git log  # a revert commit!
+  $ git revert CHECKSUM  # try to revert to older commits may cause confilicts
+  $ git revert --abort  # return to last state
+</code></pre>">  $ git checkout -- first.txt  <span class="hljs-comment"># Back to last commit</span>
+  $ git <span class="hljs-built_in">log</span>
+  $ git revert CHECKSUM  <span class="hljs-comment"># revert last commit: git revert HEAD</span>
+  $ git <span class="hljs-built_in">log</span>  <span class="hljs-comment"># a revert commit!</span>
+  $ git revert CHECKSUM  <span class="hljs-comment"># try to revert to older commits may cause confilicts</span>
+  $ git revert --abort  <span class="hljs-comment"># return to last state</span>
+</code></pre><h2 id="to-infinity...-and-beyond!"><a name="to-infinity...-and-beyond!" href="#to-infinity...-and-beyond!"></a>To infinity… and beyond!</h2><p>There are three kind of reset:</p><ul>
+<li>soft: no changes in niether staged index nor working directory</li><li>mixed (default): change staged index to  match HEAD but apply no changes to the working directory</li><li>hard: change both staged index and working directory to match HEAD</li></ul><h3 id="soft-reset"><a name="soft-reset" href="#soft-reset"></a>Soft reset</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ cat .git/HEAD
+  $ cat .git/refs/heads/master
+  $ git log
+  $ git reset --soft CHECKSUM
+  $ git log
+  $ git status
+  $ git diff --staged
+  $ cat .git/refs/heads/master
+  $ git reset --soft CHECKSUM_OF_LATESET  # it's not destructive
+</code></pre>">  $ cat .git/HEAD
+  $ cat .git/refs/heads/master
+  $ git <span class="hljs-built_in">log</span>
+  $ git reset --soft CHECKSUM
+  $ git <span class="hljs-built_in">log</span>
+  $ git status
+  $ git diff --staged
+  $ cat .git/refs/heads/master
+  $ git reset --soft CHECKSUM_OF_LATESET  <span class="hljs-comment"># it's not destructive</span>
+</code></pre><h3 id="mixed-reset"><a name="mixed-reset" href="#mixed-reset"></a>Mixed reset</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git log
+  $ git reset --mixed CHECKSUM
+  $ git log
+  $ git status  # committed changes are unstaged now
+  $ git add .
+  $ git reset HEAD FILENAME
+  $ git reset --mixed CHECKSUM_OF_LATESET  # it's not destructive too
+</code></pre>">  $ git <span class="hljs-built_in">log</span>
+  $ git reset --mixed CHECKSUM
+  $ git <span class="hljs-built_in">log</span>
+  $ git status  <span class="hljs-comment"># committed changes are unstaged now</span>
+  $ git add .
+  $ git reset HEAD FILENAME
+  $ git reset --mixed CHECKSUM_OF_LATESET  <span class="hljs-comment"># it's not destructive too</span>
+</code></pre><h3 id="hard-reset"><a name="hard-reset" href="#hard-reset"></a>Hard reset</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git log
+  $ git reset --hard CHECKSUM
+  $ git log
+  $ git status  # Nothing here!
+  $ echo &quot;this would be gone!&quot; &amp;gt;&amp;gt; first.txt
+  $ git reset --hard HEAD
+  $ git status  # nothing here! may be destructive or painful!
+  $ git reset --hard CHECKSUM_OF_LATESET  # it's here again but we are lucky because it's not collected yet!
+</code></pre>">  $ git <span class="hljs-built_in">log</span>
+  $ git reset --hard CHECKSUM
+  $ git <span class="hljs-built_in">log</span>
+  $ git status  <span class="hljs-comment"># Nothing here!</span>
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"this would be gone!"</span> &gt;&gt; first.txt
+  $ git reset --hard HEAD
+  $ git status  <span class="hljs-comment"># nothing here! may be destructive or painful!</span>
+  $ git reset --hard CHECKSUM_OF_LATESET  <span class="hljs-comment"># it's here again but we are lucky because it's not collected yet!</span>
+</code></pre><h3 id="reset-the-reset"><a name="reset-the-reset" href="#reset-the-reset"></a>Reset the Reset</h3><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git reflog  # git help reflog
+  $ git reset --hard HEAD~3
+  $ git log
+  $ git reflog
+  $ git reset --hard HEAD@{1}
+</code></pre>">  $ git reflog  <span class="hljs-comment"># git help reflog</span>
+  $ git reset --hard HEAD~<span class="hljs-number">3</span>
+  $ git <span class="hljs-built_in">log</span>
+  $ git reflog
+  $ git reset --hard HEAD@{<span class="hljs-number">1</span>}
+</code></pre><h2 id="from-dirty-to-clean!"><a name="from-dirty-to-clean!" href="#from-dirty-to-clean!"></a>From dirty to clean!</h2><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ touch jerk1.txt
+  $ touch jerk2.txt
+  $ git status
+  $ git clean
+  $ git clean -n  # Test run of clean command
+  $ git add jerk1.txt
+  $ git clean -f  # jerk1.txt still here
+  $ git reset HAED jerk1.txt
+  $ git clean -f
+  $ git status
+</code></pre>">  $ touch jerk1.txt
+  $ touch jerk2.txt
+  $ git status
+  $ git clean
+  $ git clean -n  <span class="hljs-comment"># Test run of clean command</span>
+  $ git add jerk1.txt
+  $ git clean <span class="hljs-operator">-f</span>  <span class="hljs-comment"># jerk1.txt still here</span>
+  $ git reset HAED jerk1.txt
+  $ git clean <span class="hljs-operator">-f</span>
+  $ git status
+</code></pre><h1 id="ignorance!"><a name="ignorance!" href="#ignorance!"></a>Ignorance!</h1><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ touch to_be_ignored.txt
+  $ git status
+  $ touch .gitignore
+</code></pre>">  $ touch to_be_ignored.txt
+  $ git status
+  $ touch .gitignore
+</code></pre><p>.gitignore accept patterns in each line:</p><ul>
+<li>Very basic regular experssins * ? [aeiou] [0-9]</li><li><p><code>!</code> means NOT!<br>Example:</p>
+<pre><code data-origin="<pre><code>*.jpg
+!logo.jpg
+</code></pre>">*.jpg
+!logo.jpg
+</code></pre></li><li><p>Triling slash ignores directoris: <code>static/</code></p>
+</li></ul><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ echo &quot;*_ignored.*&quot; &amp;gt;&amp;gt; .gitignore
+  $ git status  # It's ignored
+  $ git commit -am &quot;add gitignore&quot;
+</code></pre>">  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"*_ignored.*"</span> &gt;&gt; .gitignore
+  $ git status  <span class="hljs-comment"># It's ignored</span>
+  $ git commit -am <span class="hljs-string">"add gitignore"</span>
+</code></pre><p>See <a href="https://github.com/github/gitignore">github .gitignores</a><br>You could create global ignorance with <code>git config</code>.</p><p>Now if we want to ignore tracked files:</p><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ echo &quot;third.txt&quot; &amp;gt;&amp;gt; .gitignore
+  $ git status
+  $ echo &quot;some changes!&quot; &amp;gt;&amp;gt; third.txt
+  $ git status
+  $ git rm --cached third.txt
+  $ git commit -am &quot;Untrack third.txt but still available from repository&quot;
+</code></pre>">  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"third.txt"</span> &gt;&gt; .gitignore
+  $ git status
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"some changes!"</span> &gt;&gt; third.txt
+  $ git status
+  $ git rm --cached third.txt
+  $ git commit -am <span class="hljs-string">"Untrack third.txt but still available from repository"</span>
+</code></pre><p>Git ignores empty directories by default, so if you want add an empty directory to project add <code>.gitkeep</code> to it!</p><h1 id="go-to-a-git-trip!"><a name="go-to-a-git-trip!" href="#go-to-a-git-trip!"></a>Go to a git trip!</h1><p>Every Tree-ish are a git trip ticket! But wait a min! What is a Tree-ish:</p><ul>
+<li>something that references part of a tree</li><li>is <code>ish</code> because it’s vary widly</li><li>is referencing a commit</li></ul><p>Tree-ish:</p><ul>
+<li>Full 40 char checksum</li><li>Part of checksum (4 char at least) from left.</li><li>HEAD pointer</li><li>branch refs</li><li>tags refs</li><li>ancestry</li></ul><p>Ancestry:</p><ul>
+<li>Parent commit:<ul>
+<li><code>HEAD^</code>, <code>1f9c5bb^</code>, <code>master^</code></li><li><code>HEAD~1</code>, <code>HEAD~</code></li></ul>
+</li><li>Grandparent Commit:<ul>
+<li><code>HEAD^^</code>, <code>1f9c5bb^^</code>, <code>master^^</code></li><li><code>HEAD~2</code></li></ul>
+</li><li>Great-grandparent commit:<ul>
+<li><code>HEAD^^^</code>, <code>1f9c5bb^^^</code>, <code>master^^^</code></li><li><code>HEAD~3</code></li></ul>
+</li></ul><h2 id="tree-ish-contents"><a name="tree-ish-contents" href="#tree-ish-contents"></a>Tree-ish contents</h2><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git ls-tree HEAD
+  $ git ls-tree --name-only
+  $ git show HEAD
+  $ git show CHECKSUM_OF_BLOB
+  $ git show first.txt  # ambiguous
+  $ git diff HEAD~2..HEAD
+  $ git diff --stat HEAD~2..HEAD
+  $ git diff -b TREEISH..TREEISH  # ignores space changes
+  $ git diff -w TREEISH..TREEISH  # ignores all spaces
+</code></pre>">  $ git ls-tree HEAD
+  $ git ls-tree --name-only
+  $ git show HEAD
+  $ git show CHECKSUM_OF_BLOB
+  $ git show first.txt  <span class="hljs-comment"># ambiguous</span>
+  $ git diff HEAD~<span class="hljs-number">2</span>..HEAD
+  $ git diff --stat HEAD~<span class="hljs-number">2</span>..HEAD
+  $ git diff -b TREEISH..TREEISH  <span class="hljs-comment"># ignores space changes</span>
+  $ git diff -w TREEISH..TREEISH  <span class="hljs-comment"># ignores all spaces</span>
+</code></pre><h2 id="logs"><a name="logs" href="#logs"></a>Logs</h2><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git log --oneline
+  $ git log --since=&quot;2 days ago&quot;
+  $ git log --until=2.days
+  $ git log HEAD~5..HEAD~
+  $ git log -- first.txt
+  $ git log --oneline --stat --summary
+  $ git log --format=short
+  $ git log --graph --decorate
+</code></pre>">  $ git <span class="hljs-built_in">log</span> --oneline
+  $ git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">"2 days ago"</span>
+  $ git <span class="hljs-built_in">log</span> --until=<span class="hljs-number">2</span>.days
+  $ git <span class="hljs-built_in">log</span> HEAD~<span class="hljs-number">5</span>..HEAD~
+  $ git <span class="hljs-built_in">log</span> -- first.txt
+  $ git <span class="hljs-built_in">log</span> --oneline --stat --summary
+  $ git <span class="hljs-built_in">log</span> --format=short
+  $ git <span class="hljs-built_in">log</span> --graph --decorate
+</code></pre><h1 id="branches"><a name="branches" href="#branches"></a>Branches</h1><h2 id="create,-move-and-delete"><a name="create,-move-and-delete" href="#create,-move-and-delete"></a>Create, Move and Delete</h2><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git branch
+  $ git branch new_feature
+  $ git brance
+  $ ls -la .git/refs/heads
+  $ cat .git/refs/heads/new_feature
+  $ git checkout new_feature
+  $ cat .git/HEAD
+  $ echo &quot;in new branch&quot; &amp;gt;&amp;gt; second.txt
+  $ git commit -am &quot;new feature aded&quot;
+  $ git log
+  $ git checkout master
+  $ git log
+  $ git checkout new_feature
+  $ git checkout -b feature_hotfix
+  $ echo &quot;it is too hoooooooot&quot; &amp;gt;&amp;gt; second.txt
+  $ git commit -am &quot;it's feel warmer now&quot;
+  $ git checkout master
+  $ git log --oneline --graph --decorate --all
+  $ echo &quot;some annoing not commited&quot; &amp;gt;&amp;gt; first.txt
+  $ git checkout new_feature  # Cause error! It should be mostly clean
+  $ git reset --hard HEAD
+  $ touch temp.txt
+  $ git checkout new_feature  # this is the meaning of 'mostly clean'
+  $ git status
+  $ rm temp.txt
+  $ git diff master..new_feature
+  $ git branch --merged
+  $ git checkout master
+  $ git branch -m new_feature feature
+  $ git branch delete_me
+  $ git branch -d delete_me
+  $ git checkout -b delete_again
+  $ echo &quot;this will be deleted&quot; &amp;gt;&amp;gt; first.txt
+  $ git commit -am &quot;rest in peace&quot;
+  $ git checkout master
+  $ git branch -d delete_again  # Are you sure?
+  $ git branch -D delete_again
+</code></pre>">  $ git branch
+  $ git branch new_feature
+  $ git brance
+  $ ls -la .git/refs/heads
+  $ cat .git/refs/heads/new_feature
+  $ git checkout new_feature
+  $ cat .git/HEAD
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"in new branch"</span> &gt;&gt; second.txt
+  $ git commit -am <span class="hljs-string">"new feature aded"</span>
+  $ git <span class="hljs-built_in">log</span>
+  $ git checkout master
+  $ git <span class="hljs-built_in">log</span>
+  $ git checkout new_feature
+  $ git checkout -b feature_hotfix
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"it is too hoooooooot"</span> &gt;&gt; second.txt
+  $ git commit -am <span class="hljs-string">"it's feel warmer now"</span>
+  $ git checkout master
+  $ git <span class="hljs-built_in">log</span> --oneline --graph --decorate --all
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"some annoing not commited"</span> &gt;&gt; first.txt
+  $ git checkout new_feature  <span class="hljs-comment"># Cause error! It should be mostly clean</span>
+  $ git reset --hard HEAD
+  $ touch temp.txt
+  $ git checkout new_feature  <span class="hljs-comment"># this is the meaning of 'mostly clean'</span>
+  $ git status
+  $ rm temp.txt
+  $ git diff master..new_feature
+  $ git branch --merged
+  $ git checkout master
+  $ git branch -m new_feature feature
+  $ git branch delete_me
+  $ git branch <span class="hljs-operator">-d</span> delete_me
+  $ git checkout -b delete_again
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"this will be deleted"</span> &gt;&gt; first.txt
+  $ git commit -am <span class="hljs-string">"rest in peace"</span>
+  $ git checkout master
+  $ git branch <span class="hljs-operator">-d</span> delete_again  <span class="hljs-comment"># Are you sure?</span>
+  $ git branch -D delete_again
+</code></pre><h2 id="merge"><a name="merge" href="#merge"></a>Merge</h2><pre><code data-origin="<pre><code>      A---B---C   [feature]
+     /
+    D---E---F---G---H   [master]
+
+      A---B---C   [feature]
+     /         \
+    D---E---F---G---H   [master]
+</code></pre>">      A---B---C   [feature]
+     /
+    D---E---F---G---H   [master]
+
+      A---B---C   [feature]
+     /         \
+    D---E---F---G---H   [master]
+</code></pre><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git merge feature
+  $ git merge --no-ff hotfix
+  $ git branch --merged
+</code></pre>">  $ git merge feature
+  $ git merge --no-ff hotfix
+  $ git branch --merged
+</code></pre><p>Strategies to avoid conflicts:</p><ul>
+<li>Keep lins short</li><li>keep commit short</li><li>merge often</li></ul><h1 id="stash"><a name="stash" href="#stash"></a>Stash</h1><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ echo &quot;I am editing this file&quot; &amp;gt;&amp;gt; first.txt
+  $ git stach save &quot;some changes&quot;
+  $ git stash list
+  $ git stash show REF
+  $ git stash show -p REF
+  $ git stash pop REF
+  $ git stash list
+  $ git stash
+  $ git stash list
+  $ git stash apply REF
+  $ git stash list
+  $ git stash drop REF
+  $ git stash clear
+</code></pre>">  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"I am editing this file"</span> &gt;&gt; first.txt
+  $ git stach save <span class="hljs-string">"some changes"</span>
+  $ git stash list
+  $ git stash show REF
+  $ git stash show -p REF
+  $ git stash pop REF
+  $ git stash list
+  $ git stash
+  $ git stash list
+  $ git stash apply REF
+  $ git stash list
+  $ git stash drop REF
+  $ git stash clear
+</code></pre><h1 id="remotes"><a name="remotes" href="#remotes"></a>Remotes</h1><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git remote add origin URL
+  $ cat .git/config
+  $ git remote
+  $ git remote -v
+  $ cat .git/config
+  $ git remote rm origin
+  $ git remote add origin URL
+  $ git push -u origin master
+  $ cat .git/config
+  $ ls .git/refs/remote
+  $ ls .git/refs/remote/origin
+  $ cat .git/refs/remote/master
+  $ git branch -r
+  $ git branch -a
+  $ git diff master origin/master
+  $ git merge origin/feature
+  $ git push origin :delete_me
+  $ git push origin --delete delete_me
+</code></pre>">  $ git remote add origin URL
+  $ cat .git/config
+  $ git remote
+  $ git remote -v
+  $ cat .git/config
+  $ git remote rm origin
+  $ git remote add origin URL
+  $ git push -u origin master
+  $ cat .git/config
+  $ ls .git/refs/remote
+  $ ls .git/refs/remote/origin
+  $ cat .git/refs/remote/master
+  $ git branch -r
+  $ git branch <span class="hljs-operator">-a</span>
+  $ git diff master origin/master
+  $ git merge origin/feature
+  $ git push origin :delete_me
+  $ git push origin --delete delete_me
+</code></pre><h1 id="rebase"><a name="rebase" href="#rebase"></a>Rebase</h1><pre><code data-origin="<pre><code>          A---B---C   [feature]
+         /
+    D---E---F---G   [master]
+
+                  A'--B'--C'   [feature]
+                 /
+    D---E---F---G   [master]
+</code></pre>">          A---B---C   [feature]
+         /
+    D---E---F---G   [master]
+
+                  A'--B'--C'   [feature]
+                 /
+    D---E---F---G   [master]
+</code></pre><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git checkout -b extra_feature master
+  $ echo &quot;landing giant boeing&quot; &amp;gt;&amp;gt; first.txt
+  $ git commit -am &quot;initial commit -- extra feature&quot;
+  $ git checkout -b hotfix_chili master
+  $ echo &quot;An chili pepper here!&quot; &amp;gt;&amp;gt; second.txt
+  $ git commit -am &quot;fix a hot a possible&quot;
+  $ git checkout master
+  $ git merge hotfix_chili
+  $ git branch -d hotfix_chili
+  $ git log --oneline --decorate
+  $ git checkout extra_feature
+  $ git log --oneline --decorate
+  $ git rebase master
+  $ git log --oneline --decorate
+  $ git reflog
+  $ git reset --hard HEAD@{NUM}
+  $ git rebase -i master
+  $ git push -f origin extra_feature  # should push forcefully
+</code></pre>">  $ git checkout -b extra_feature master
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"landing giant boeing"</span> &gt;&gt; first.txt
+  $ git commit -am <span class="hljs-string">"initial commit -- extra feature"</span>
+  $ git checkout -b hotfix_chili master
+  $ <span class="hljs-built_in">echo</span> <span class="hljs-string">"An chili pepper here!"</span> &gt;&gt; second.txt
+  $ git commit -am <span class="hljs-string">"fix a hot a possible"</span>
+  $ git checkout master
+  $ git merge hotfix_chili
+  $ git branch <span class="hljs-operator">-d</span> hotfix_chili
+  $ git <span class="hljs-built_in">log</span> --oneline --decorate
+  $ git checkout extra_feature
+  $ git <span class="hljs-built_in">log</span> --oneline --decorate
+  $ git rebase master
+  $ git <span class="hljs-built_in">log</span> --oneline --decorate
+  $ git reflog
+  $ git reset --hard HEAD@{NUM}
+  $ git rebase -i master
+  $ git push <span class="hljs-operator">-f</span> origin extra_feature  <span class="hljs-comment"># should push forcefully</span>
+</code></pre><p>The Golden Rule of Rebasing:<br><strong>Once you understand what rebasing is, the most important thing to learn is when not to do it. The golden rule of git rebase is to never use it on public branches.</strong><br>see: <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">Merge vs Rebase</a></p><h1 id="tagging"><a name="tagging" href="#tagging"></a>Tagging</h1><pre class="bash hljs"><code class="bash" data-origin="<pre><code class=&quot;bash&quot;>  $ git log --oneline --decorate
+  $ git tag v0.1.0
+  $ git tag
+  $ git show v0.1.0
+  $ git tag -a v0.1.0rc HAED~1 -m &quot;First RC realse&quot;
+  $ git log --oneline --decorate
+  $ git reflog
+  $ git push origin --tags
+</code></pre>">  $ git <span class="hljs-built_in">log</span> --oneline --decorate
+  $ git tag v0.<span class="hljs-number">1.0</span>
+  $ git tag
+  $ git show v0.<span class="hljs-number">1.0</span>
+  $ git tag <span class="hljs-operator">-a</span> v0.<span class="hljs-number">1.0</span>rc HAED~<span class="hljs-number">1</span> -m <span class="hljs-string">"First RC realse"</span>
+  $ git <span class="hljs-built_in">log</span> --oneline --decorate
+  $ git reflog
+  $ git push origin --tags
+</code></pre><h1 id="git-workflow"><a name="git-workflow" href="#git-workflow"></a>Git workflow</h1><p>see: <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/">Comparing Workflows</a></p><h2 id="centralized-workflow"><a name="centralized-workflow" href="#centralized-workflow"></a>Centralized Workflow</h2><ul>
+<li>Everyone works on master!</li><li>Needs many rebases</li><li>Confilicts are totaly accepted!</li><li>Only one branch make the way clean (!?)</li></ul><h2 id="feature-branch-workflow"><a name="feature-branch-workflow" href="#feature-branch-workflow"></a>Feature Branch Workflow</h2><ul>
+<li>Every feature have thier own brach</li><li>Based on pull requests</li><li>Less confilicts may happens</li><li>There may be many waits for a branch owner to finish their work</li></ul><h2 id="gitflow-workflow"><a name="gitflow-workflow" href="#gitflow-workflow"></a>Gitflow Workflow</h2><p>see: <a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></p><ul>
+<li>There are 5 basic branch type:<ul>
+<li>master: stable release</li><li>develop: main development branch</li><li>feature: branch for new feature development</li><li>release: branch from develop for every single feature releases e.g. 1.5.2 -&gt; 1.6 not 1.5.3 nor 2.0</li><li>hotfix: branch from master to apply hotfixes to master</li></ul>
+</li><li>Compatible with <a href="http://semver.org/">semver</a></li><li>Rare confilicts</li><li>Descentralized while Centralized</li><li>Very collaborative atmosphere</li><li>Never breaks stable releases</li><li>A bit complex to handle, nevertheless there is a handy automation tool</li></ul><p><a href="https://github.com/nvie/gitflow">git-flow</a> is a tool to automate this model.<br>see: <a href="http://danielkummer.github.io/git-flow-cheatsheet/">git-flow cheatsheet</a></p><h2 id="forking-workflow"><a name="forking-workflow" href="#forking-workflow"></a>Forking Workflow</h2><ul>
+<li>Every member works on thier own copy of repository (fork)</li><li>Based on pull requests</li><li>There is a maintainer responsible to merge everything</li><li>Prevents unwanted changes to main repository</li><li>Usually opensource/public projects use this model</li></ul><h2 id="patch-workflow"><a name="patch-workflow" href="#patch-workflow"></a>Patch Workflow</h2><p>see: <a href="http://rypress.com/tutorials/git/patch-workflows">Patch Workflows</a></p><ul>
+<li>Every member works on thier own copy of repository (fork)</li><li>Based on emailed patches! (see: <a href="https://git-scm.com/book/en/v2/Git-Commands-Email">A3.9 Git Commands - Email</a>)</li><li>There is a maintainer responsible to merge everything</li><li>Linux Kernel uses this model!</li></ul>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>
