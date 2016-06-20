@@ -185,11 +185,11 @@ IndexError: list index out of range
     The proper way to catch multiple exceptions in an except statement is to specify the first parameter as a tuple containing all exceptions to be caught. Also, for maximum portability, use the as keyword, since that syntax is supported by both Python 2 and Python 3:
 
     ```python
-try:
-    l = ["a", "b"]
-    int(l[2])
-except (ValueError, IndexError) as e:
-    pass
+    try:
+        l = ["a", "b"]
+        int(l[2])
+    except (ValueError, IndexError) as e:
+        pass
 
     ```
 
