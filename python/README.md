@@ -176,8 +176,7 @@ Traceback (most recent call last):
   File "<stdin>", line 3, in <module>
 IndexError: list index out of range
 ```
-
-	The problem here is that the except statement does not take a list of exceptions specified in this manner.
+The problem here is that the except statement does not take a list of exceptions specified in this manner.
     Rather, In Python 2.x, the syntax except Exception, e is used to bind the exception to the optional second parameter specified (in this case e),
     in order to make it available for further inspection.
     As a result, in the above code, the IndexError exception is not being caught by the except statement; rather, the exception instead ends up being bound to a parameter named IndexError.
