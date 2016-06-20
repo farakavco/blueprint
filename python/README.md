@@ -86,7 +86,7 @@ imports should usually be on separate lines, e.g.:
 import os
 import sys
 ```
-    No:
+No:
 ```python
 import sys, os
 ```
