@@ -5,25 +5,25 @@ Blueprint Python
 The Zen of Python, by Tim Peters
 --------------------------------
 
-- ###### Beautiful is better than ugly.
-- ###### Explicit is better than implicit.
-- ###### Simple is better than complex.
-- ###### Complex is better than complicated.
-- ###### Flat is better than nested.
-- ###### Sparse is better than dense.
-- ###### Readability counts.
-- ###### Special cases aren't special enough to break the rules.
-- ###### Although practicality beats purity.
-- ###### Errors should never pass silently.
-- ###### Unless explicitly silenced.
-- ###### In the face of ambiguity, refuse the temptation to guess.
-- ###### There should be one-- and preferably only one --obvious way to do it.
-- ###### Although that way may not be obvious at first unless you're Dutch.
-- ###### Now is better than never.
-- ###### Although never is often better than *right* now.
-- ###### If the implementation is hard to explain, it's a bad idea.
-- ###### If the implementation is easy to explain, it may be a good idea.
-- ###### Namespaces are one honking great idea -- let's do more of those!
+- Beautiful is better than ugly.
+- Explicit is better than implicit.
+- Simple is better than complex.
+- Complex is better than complicated.
+- Flat is better than nested.
+- Sparse is better than dense.
+- Readability counts.
+- Special cases aren't special enough to break the rules.
+- Although practicality beats purity.
+- Errors should never pass silently.
+- Unless explicitly silenced.
+- In the face of ambiguity, refuse the temptation to guess.
+- There should be one-- and preferably only one --obvious way to do it.
+- Although that way may not be obvious at first unless you're Dutch.
+- Now is better than never.
+- Although never is often better than *right* now.
+- If the implementation is hard to explain, it's a bad idea.
+- If the implementation is easy to explain, it may be a good idea.
+- Namespaces are one honking great idea -- let's do more of those!
 
 
 Coding Style
@@ -114,12 +114,9 @@ Common Mistakes in Python
 
 * ##### Don't Code C in Python:
 A few reminders for C/C++ programmers new to Python:
-
-    1- You don't need to type parentheses around tests in if and while headers (e.g., ```if (X==1):```). You can, if you like, since any expression can be enclosed in parentheses, but they are fully superfluous in this context.
-
-    2- Don't terminate all of your statements with a semicolon. It's technically legal to do this in Python, but is totally useless unless you're placing more than one statement on a single line (e.g., ```x=1; y=2; z=3```).
-
-    3- Don't embed assignment statements in while loop tests (e.g., ```while ((x=next() != NULL```)). In Python, statements cannot appear where expressions are expected, and an assignment is not an expression.
+1- You don't need to type parentheses around tests in if and while headers (e.g., ```if (X==1):```). You can, if you like, since any expression can be enclosed in parentheses, but they are fully superfluous in this context.
+2- Don't terminate all of your statements with a semicolon. It's technically legal to do this in Python, but is totally useless unless you're placing more than one statement on a single line (e.g., ```x=1; y=2; z=3```).
+3- Don't embed assignment statements in while loop tests (e.g., ```while ((x=next() != NULL```)). In Python, statements cannot appear where expressions are expected, and an assignment is not an expression.
 
 * ##### Use Simple for Loops Instead of while or range:
 
