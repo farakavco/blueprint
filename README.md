@@ -9,4 +9,3 @@
  * [Python](https://github.com/farakavco/blueprint/tree/master/python)
  * [Go](https://github.com/farakavco/blueprint/tree/master/go)
  * [iOS](https://github.com/farakavco/blueprint/tree/master/iOS)
- * [git](https://github.com/farakavco/blueprint/tree/master/git)
