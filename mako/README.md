@@ -1,19 +1,20 @@
 Blueprint Mako
 =============
 
-###General principles
+##General principles
+
 * Read [mako-documentation](http://docs.makotemplates.org/en/latest/syntax.html) Before start writing mako file
 * Add blank lines before and after of block scopes such as if, for, def, ...
 * Do not add blank lines without a reason
 * Add comment for html tags 
 
 
-Coding Style
-------------
+##Coding Style
 
 * Define a function:
 ```mako
     For example on test.mak file:
+    
     <%def name="main_items(item, additional_class='')">
         <div class="${additional_class}">
             <h3 class="userName">${item.channel.title}</h3>
