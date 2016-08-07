@@ -6,6 +6,7 @@
  * [CSS](https://github.com/farakavco/blueprint/tree/master/css)
  * [JavaScript](https://github.com/farakavco/blueprint/tree/master/javascript)
  * [HTML](https://github.com/farakavco/blueprint/tree/master/html)
+ * [Mako](https://github.com/farakavco/blueprint/tree/master/mako)
  * [Python](https://github.com/farakavco/blueprint/tree/master/python)
  * [Go](https://github.com/farakavco/blueprint/tree/master/go)
  * [iOS](https://github.com/farakavco/blueprint/tree/master/iOS)
