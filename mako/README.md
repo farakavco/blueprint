@@ -1,7 +1,7 @@
 Blueprint Mako
 =============
 
-##General principles
+##General Principles
 
 * Read [mako-documentation](http://docs.makotemplates.org/en/latest/syntax.html) Before start writing mako file
 * Add blank lines before and after of block scopes such as if, for, def, ...
