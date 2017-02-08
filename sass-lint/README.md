@@ -4,7 +4,7 @@ Blueprint Sass Lint
  * [sass-lint grunt contrib](https://github.com/sasstools/grunt-sass-lint)
  * [standard sass-lint config file](https://github.com/farakavco/blueprint/sass-lint/.sass.lint.yaml)
 
-This command in every project must run sass-lint on project sass file
+This command must run sass-lint in every front-end project.
 ```Bash
 npm run lint
 ```
