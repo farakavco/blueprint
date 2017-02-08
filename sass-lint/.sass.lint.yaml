@@ -1,0 +1,14 @@
+# Linter Options
+options:
+rules:
+  no-important: 0
+  indentation:
+    - 4
+    -
+      size: 4
+  class-name-format:
+    allow-leading-underscore: true
+  property-sort-order: 0
+  nesting-depth:
+    - 1
+    - max-depth: 4
