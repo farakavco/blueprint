@@ -23,6 +23,49 @@ package.json devDependencies must have line like this:
 }
 ```
 
+Gruntjs.json sample task
+```JAVASCRIPT
+var path = require('path');
+
+module.exports = function (grunt) {
+    'use strict';
+    require('load-grunt-tasks')(grunt);
+    grunt.initConfig({
+        sass: {
+            dist: {
+                files: {
+                    'dist/css/style.css': 'sass/main.scss'
+                }
+            }
+        },
+        watch: {
+            sass: {
+                files: 'sass/*.scss',
+                tasks: ['sass'],
+                options: {
+                    livereload: true
+                }
+            },
+            sassLint: {
+                files: 'sass/*.scss',
+                tasks: ['sasslint'],
+                livereload: true
+            }
+        },
+        sasslint: {
+            target: ['sass/*.scss', 'sass/**/*.scss']
+        },
+        clean: ['dist']
+    });
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass-lint');
+    else if (grunt.option('lint')) {
+        grunt.registerTask('default', ['sasslint','watch:sassLint']);
+    }
+};
+```
+
 #### Farakavco sass-lint standard config file
 ```Yaml
 # Linter Options
