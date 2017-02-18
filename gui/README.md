@@ -1,4 +1,4 @@
-# Graphical user interface CSS
+Graphical user interface CSS
 ============
 
 ## Main Keywords
