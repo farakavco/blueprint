@@ -186,10 +186,9 @@ Generally accepted principles for Graphical user interface design are:
  * Make common actions simple at the expense of uncommon actions being made harder.
  * Provide uniformity and consistency
  * Five ways to provide simplicity:
-
- * Present common and necessary functions first.
- * Prominently feature important functions,
- * Hide more sophisticated and less frequently used functions
+     * Present common and necessary functions first.
+     * Prominently feature important functions,
+     * Hide more sophisticated and less frequently used functions
 
 ### 17. Transparency
 
