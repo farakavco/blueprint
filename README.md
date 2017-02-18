@@ -11,3 +11,4 @@
  * [Go](https://github.com/farakavco/blueprint/tree/master/go)
  * [iOS](https://github.com/farakavco/blueprint/tree/master/iOS)
  * [Sass-lint](https://github.com/farakavco/blueprint/tree/master/sass-lint)
+ * [GUI](https://github.com/farakavco/blueprint/tree/master/gui)
