@@ -1,5 +1,5 @@
 # Blueprint
- Farakavco development convention and spacification
+ Farakavco development convention and specification
 
 > There are only two hard problems in Computer Science: cache invalidation and naming things — Phil Karlton
 

@@ -203,7 +203,7 @@ Generally accepted principles for Graphical user interface design are:
 
 
 
-## Refrence
+## Reference
 
 - [Graphic Design/Principles of Design](https://en.wikibooks.org/wiki/Graphic_Design/Principles_of_Design)
 - [GUI Design Principles](https://en.wikibooks.org/wiki/GUI_Design_Principles)
