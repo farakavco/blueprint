@@ -11,8 +11,8 @@ Table Of Content
 * Do not add blank lines without a reason
 * For readability, add blank lines to separate large or logical code blocks
 * Do not omitting the 'html' and 'body' tags
-* Avoid using inliine style
-* Avoid using "style,link,script" tag, Except for refrence to external resource
+* Avoid using inline style
+* Avoid using "style,link,script" tag, Except for reference to external resource
 * Avoid using deprecated tag and attribute like: 'color' 'font' 'blink' 'marquee'
 * Close All HTML Elements
 * Put all css in head top of page

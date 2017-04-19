@@ -12,7 +12,7 @@ The Zen of Python, by Tim Peters
 - Flat is better than nested.
 - Sparse is better than dense.
 - Readability counts.
-- Special cases aren't special enough to break the rules.
+- Special cases are not special enough to break the rules.
 - Although practicality beats purity.
 - Errors should never pass silently.
 - Unless explicitly silenced.
@@ -30,7 +30,7 @@ Coding Style
 ------------
 
 * All statements in modules'd root block should be separated by two 
-blank lines, and all statements in class definition block sould be 
+blank lines, and all statements in class definition block should be 
 separated by single blank line:
 ```python
 import sys
@@ -72,8 +72,8 @@ class MyClass(object):
         pass
 ```
 
-* In case of recieving two values but you need one of them
-to avoid confict with gettest import and buildin methods in class we use (___)
+* In case of receiving two values but you need one of them
+to avoid conflict with gettest import and builtin methods in class we use (___)
 ```python
 result, ___ = method()
 ```
@@ -191,7 +191,7 @@ The proper way to catch multiple exceptions in an except statement is to specify
 
     ```
 
-* ##### reload doesn't impact names copied with from:
+* ##### reload does not impact names copied with from:
 
     reload works much better with the import statement. If you use from statements, remember to rerun the from after the reload, or you'll still have old names.
 

@@ -1,5 +1,5 @@
 # Blueprint
- Farakavco development convention and spacification
+ Farakavco development convention and specification
 
 > There are only two hard problems in Computer Science: cache invalidation and naming things — Phil Karlton
 
@@ -13,3 +13,4 @@
  * [Sass-lint](https://github.com/farakavco/blueprint/tree/master/sass-lint)
  * [GUI](https://github.com/farakavco/blueprint/tree/master/gui)
  * [NPM](https://github.com/farakavco/blueprint/tree/master/npm)
+ * [Git-Hooks](https://github.com/farakavco/blueprint/tree/master/git-hooks)

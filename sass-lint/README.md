@@ -18,12 +18,12 @@ package.json scripts must have line like this:
 
 package.json devDependencies must have line like this:
 ```Json
-"scripts": {
+"devDependencies": {
     "grunt-sass-lint": "*"
 }
 ```
 
-Gruntjs.json sample task
+Gruntfile.js sample task:
 ```JAVASCRIPT
 var path = require('path');
 
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-sass-lint');
-    else if (grunt.option('lint')) {
+    if (grunt.option('lint')) {
         grunt.registerTask('default', ['sasslint','watch:sassLint']);
     }
 };
