@@ -14,3 +14,4 @@
  * [GUI](https://github.com/farakavco/blueprint/tree/master/gui)
  * [NPM](https://github.com/farakavco/blueprint/tree/master/npm)
  * [Git-Hooks](https://github.com/farakavco/blueprint/tree/master/git-hooks)
+ * [SEO](https://github.com/farakavco/blueprint/tree/master/seo)
