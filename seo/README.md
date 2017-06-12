@@ -39,11 +39,11 @@ If you have pages like category pages, tag pages or anything like these which a 
 **Examples**:
   - First page URL:
     
-    http://example.com/category/*helicopter*
+    http://example.com/category/helicopter
   
   - Second page URL:
   
-    http://example.com/category/*helicopter*/page/2
+    http://example.com/category/helicopter/page/2
     
     ...
     
@@ -51,17 +51,17 @@ If you have pages like category pages, tag pages or anything like these which a 
   
   - 54th page URL:
   
-    http://example.com/category/*helicopter*/page/54
+    http://example.com/category/helicopter/page/54
 
     #### Rules
 
     First page meta tags:
     ```
-    <link rel="next" href="http://www.example.com/category/*helicopter*/page/2">
+    <link rel="next" href="http://www.example.com/category/helicopter/page/2">
     ```
     Second page meta tags:
     ```
-    <link rel="next" href="http://www.example.com/category/*helicopter*/page/3">
+    <link rel="next" href="http://www.example.com/category/helicopter/page/3">
     <link rel="prev" href="http://www.example.com/category/helicopter">
     <meta name="robots" content="noindex,follow,noodp"/>
     ```
@@ -69,7 +69,7 @@ If you have pages like category pages, tag pages or anything like these which a 
     
     54th page meta tags:
     ```
-    <link rel="next" href="http://www.example.com/category/*helicopter*/page/55">
-    <link rel="prev" href="http://www.example.com/category/*helicopter*/page/53">
+    <link rel="next" href="http://www.example.com/category/helicopter/page/55">
+    <link rel="prev" href="http://www.example.com/category/helicopter/page/53">
     <meta name="robots" content="noindex,follow,noodp"/>
      ```
