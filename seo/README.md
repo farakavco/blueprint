@@ -148,101 +148,51 @@ After setting required meta tags, it's better for the website to have the follow
     
 #### General
 
-##### Logo
-  Put the website logo in the following HTML form:
-  
-  ```
-  <div itemscope itemtype="http://schema.org/Organization">
-    <a itemprop="url" href="http://www.mysite.com/">
-      <img itemprop="logo" src="http://www.mysite.com/logo.jpg" alt="My logo"/>
-    </a>
-  </div>
-  ```
-  
-##### Business contact info [Reference Document](http://schema.org/ContactPoint)
-  If you have the business's address in the page, then write it in the following form:
-  
-  **HTML**:
-  
-  ```
-  <div>
-    <h1>Farakav Co.</h1>
-    <div>No 96, West Zaratostra St., Tehran, Iran</div>
-    <div>
-      Tel: <span itemprop="telephone">+0098 889933221</span>
-    </div>
-  </div>
-  ```
-  
-  **JSON-LD**:
+##### Homepage
+ 
+```
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "legalName" : "Farakav Art Institute",
+  "url" : "http://farakav.com/",
+  "contactPoint" : [{
+    "@type" : "ContactPoint",
+    "telephone" : "+98-21-88993311",
+    "contactType" : "روابط عمومی"
+  }]
+  "logo" : "http://farakav.com/assets/logo/main-logo.png",
+  "sameAs" : [
+    "http://www.facebook.com/farakav",
+    "http://www.twitter.com/farakav",
+    "http://plus.google.com/+farakav",
+    "https://www.youtube.com/user/farakav",
+    "http://www.linkedin.com/company/farakav",
+    "https://www.wikidata.org/wiki/Q20736641"
+  ]
+}
+</script>
+```
 
-  Multiple contact points:
-  ```
-  <script type="application/ld+json">
-  {
-    "@context" : "http://schema.org",
-    "@type" : "Organization",
-    "url" : "http://www.t-mobile.com",
-    "contactPoint" : [
-      { "@type" : "ContactPoint",
-        "telephone" : "+1-877-746-0909",
-        "contactType" : "customer service",
-        "contactOption" : "TollFree",
-        "areaServed" : "US"
-      } , {
-        "@type" : "ContactPoint",
-        "telephone" : "+1-505-998-3793",
-        "contactType" : "customer service"
-      } , {
-        "@type" : "ContactPoint",
-        "telephone" : "+1-877-296-1018",
-        "contactType" : "customer service",
-        "contactOption" : ["HearingImpairedSupported","TollFree"] ,
-        "areaServed" : "US"
-      } , {
-        "@type" : "ContactPoint",
-        "telephone" : "+1-877-453-1304",
-        "contactType" : "technical support",
-        "contactOption" : "TollFree",
-        "areaServed" : ["US","CA"],
-        "availableLanguage" : ["English","French"]
-      } , {
-        "@type" : "ContactPoint",
-        "telephone" : "+1-877-453-1304",
-        "contactType" : "bill payment",
-        "contactOption" : "TollFree",
-        "areaServed" : ["US","CA"]
-      } ]
-  }
-  </script>
-  ```
-  Another example of single phone number:
-  
-  ```
-  <script type="application/ld+json">
-  { "@context" : "http://schema.org",
-    "@type" : "Organization",
-    "url" : "http://www.your-company-site.com",
-    "contactPoint" : [
-      { "@type" : "ContactPoint",
-        "telephone" : "+1-401-555-1212",
-        "contactType" : "customer service"
-      } ] }
-  </script>
-  ```
-  
-  For some other examples of contact page schema, [see the documentation page examples](http://schema.org/PostalAddress)
-  
-##### Social media links
+If the website has *search page*, then you can inform search engine about it and make it available to the user's browser by putting the following markup:
 
-  ```
-  <span itemscope itemtype="http://schema.org/Organization">
-    <link itemprop="url" href="http://www.mysite.com" /> 
-    <a itemprop="sameAs" href="http://www.facebook.com/farakav>Facebook</a>
-    <a itemprop="sameAs" href="http://www.twitter.com/farakav">Twitter</a>
-    <a itemprop="sameAs" href="https://plus.google.com/+webgodo/posts">Google Plus</a>
-  </span>
-  ```
+```
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite", 
+  "name" : "Farakav Art Institute",
+  "url" : "http://farakav.com/",
+  "potentialAction" : {
+    "@type" : "SearchAction",
+    "target" : "http://farakav.com/?s={search_term}",
+    "query-input" : "required name=search_term"
+  }                     
+}
+</script>
+```
+
+Notice that the `target` under `potentialAction` is a URL to search result page. So modify it with appropriate `query-input`. 
 
 #### Video
 
@@ -287,3 +237,8 @@ In a page which a single video is shown, the schema is like the following:
   }
   </script>
   ```
+  
+#### Article, News or blog post
+
+Non-video objects must be based on one of the following schema.org types: [Article](http://schema.org/Article), [NewsArticle](http://schema.org/NewsArticle), [BlogPosting](http://schema.org/BlogPosting).
+
