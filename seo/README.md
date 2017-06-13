@@ -3,14 +3,26 @@
 Table Of Content 
 * [Links](#user-content-links)
 * [Paginated pages](#user-content-paginated-pages)
+* [Images](#user-content-images)
 
 ## Links
+
+Every link should have `href` attribute filled with a relative/absolute path to target page.
+
+  **Examples**: 
+  
+    - Absolute: `<a href="http://yahoo.com/sports/canadian-girl-riding-big-helicopter">A canadian girl riding a big helicopter</a>`
+    
+    - Relative: `<a href="/helicopter/large-helicopter-crashed-in-mountains">A canadian girl riding a big helicopter</a>`
+    
 
 It’s better to include these attributes in every link:
 
 - **title**: Most of the times it is same as the link’s anchor text
 
-  **Example**: <a href=”http://somewhere.com/path-to-some-page” title=”Some interesting post title”>Some interesting post title</a>
+  **Example**:
+  
+    - `<a href=”http://somewhere.com/path-to-some-page” title=”Some interesting post title”>Some interesting post title</a>`
 
 - **rel**: This attribute’s value varies by place. It can have multiple values; These values should be written and separated by space character.
 
@@ -39,19 +51,17 @@ If you have pages like category pages, tag pages or anything like these which a 
 **Examples**:
   - First page URL:
     
-    http://example.com/category/helicopter
+    `http://example.com/category/helicopter`
   
   - Second page URL:
   
-    http://example.com/category/helicopter/page/2
-    
-    ...
+    `http://example.com/category/helicopter/page/2`
     
     ...
   
   - 54th page URL:
   
-    http://example.com/category/helicopter/page/54
+    `http://example.com/category/helicopter/page/54`
 
     ### Rules
 
@@ -73,3 +83,19 @@ If you have pages like category pages, tag pages or anything like these which a 
     <link rel="prev" href="http://www.example.com/category/helicopter/page/53">
     <meta name="robots" content="noindex,follow,noodp"/>
      ```
+
+## Images
+
+Every image should have an `alt` attribute filled with the title of the article or anchor text of the link.
+
+**Example**:
+  - `<a href="path/to/awesome-helicopter" title="An awesome helicopter">An awesome helicopter</a>`
+
+### In case of content with keywords
+If the image is a thumbnail of a content/link and the content/link has *a title* and *some keywords*, fill the `alt` attribute with the *list of comma separated keywords* and fill the `title` attribute with the title/anchor-text of the content/link.
+
+**Examples**:
+  - ```
+    <a href="path/to/awesome-helicopter" title="An awesome helicopter">
+        <img src="/path/to/a-helicopter.jpg" title="An awesome helicopter" alt="helicopter, awesome helicopter, new helicopter, quadcopter, army helicopter" />
+    </a>```
