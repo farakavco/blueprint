@@ -142,6 +142,28 @@ Following meta tags *should* be implemented in every page:
 ### Recommended meta tags
 
 After setting required meta tags, it's better for the website to have the following meta tags: 
+
+  - **OpenGraph**
+    [OpenGraph](http://ogp.me/) meta tags can vary page by page and for each content type.
+    
+#### General (for mostly all pages)
+
+  ```
+  <meta property="og:title" content="The Rock" />
+  <meta property="og:site_name" content="Farakav" />
+  <meta property="og:url" content="http://www.farakav.com" />
+  <meta property="og:image" content="http://farakav.com/assets/img/logo.png" />
+  <meta property="og:description" content="A heavy helicopter flying from Newyork to Southampton in England. It spreads american dream of peace in different cities of USA and England." />
+  ```
+  
+  - Value of these meta tags should be same as their pair in the following table:
+  
+  OG | HTML
+  |--- | --- |
+  og:title | title
+  og:url | canonical
+  og:description | description
+  
   
   - **Schema meta tags**: [Schema.org](http://schema.org) is a structured data on the page which helps search engines to gather better information.
     There are many type of content which should have it's specific schema. A complete list of these schemas are listed in [schema.org's documentation page](http://schema.org/docs/full.html)
@@ -242,3 +264,51 @@ In a page which a single video is shown, the schema is like the following:
 
 Non-video objects must be based on one of the following schema.org types: [Article](http://schema.org/Article), [NewsArticle](http://schema.org/NewsArticle), [BlogPosting](http://schema.org/BlogPosting).
 
+You can use the following *JSON-LD*:
+
+```
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "headline": "پخش قسمت جدید فیلم سینمایی فرار از زندان از شبکه سوم سیما",
+  "image": "http://farakav.com/assets/uploads/img/prison-break.jpg",
+"keywords": ["television","تلویزیون","شبکه سه","فرار از زندان","سریال فرار از زندان","سری جدید سریال فرار از زندان"],
+  "datePublished": "2017-09-20T13:39:38Z",
+  "articleSection": "entertainment",
+  "creator": "حسن فتحی",
+  "author": "سید محسن قائم مقامی",
+  "articleBody": "مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد.مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد. مایکل اسکوفیلد زنده است . سری جدید سریال فرار از زندان پر مخاطب ترین سریال شبکه فوکس ساخته شده و قرار است بزودی آماده نمایش شود البته این یک مینی سری 9 قسمتی است که اگر مورد استقبال قرار بگیرد شاید به صورت یک سری چند فصلی ادامه بیابد.",
+  "mainEntityOfPage": "True"
+}
+</script>
+```
+
+### Breadcrumb
+
+If your pages have breadcrumbs, then add following *microdata* to the HTML markup of them:
+ 
+```
+<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/">
+        <span itemprop="name">Home</span></a>
+    <meta itemprop="position" content="1" />
+  </li>
+  ›
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/activewear/">
+      <span itemprop="name">Activewear</span></a>
+    <meta itemprop="position" content="2" />
+  </li>
+  ›
+  <li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+    <a itemprop="item" href="https://example.com/activewear/tops/">
+      <span itemprop="name">Tops</span></a>
+    <meta itemprop="position" content="3" />
+  </li>
+</ul>
+```
