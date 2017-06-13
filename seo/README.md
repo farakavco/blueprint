@@ -143,10 +143,10 @@ Following meta tags *should* be implemented in every page:
 
 After setting required meta tags, it's better for the website to have the following meta tags: 
 
-  - **OpenGraph**
+#### OpenGraph
     [OpenGraph](http://ogp.me/) meta tags can vary page by page and for each content type.
     
-#### General (for mostly all pages)
+##### General (for mostly all pages)
 
   ```
   <meta property="og:title" content="The Rock" />
@@ -164,14 +164,52 @@ After setting required meta tags, it's better for the website to have the follow
   og:url | canonical
   og:description | description
   
-  
-  - **Schema meta tags**: [Schema.org](http://schema.org) is a structured data on the page which helps search engines to gather better information.
+##### Video page
+
+  ```
+  <meta property="og:image" content="http://s.tamasha.com/statics/video_thumbnail/120606_2_default_1920x1080.jpg">
+  <meta property="og:image:secure_url" content="http://s.tamasha.com/statics/video_thumbnail/120606_2_default_1920x1080.jpg">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="360">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:type" content="video">
+  <meta property="og:video" content="http://tamasha.com/embed/ydgXa">
+  <meta property="og:video:secure_url" content="http://tamasha.com/embed/ydgXa">
+  <meta property="og:video:type" content="text/html">
+  <meta property="og:video:width" content="640">
+  <meta property="og:video:height" content="360">
+  <meta property="og:video:duration" content="110">
+  <meta property="og:video:tag" content="بادکنک">
+  <meta property="og:video:tag" content="اسکیت_بورد">
+  <meta property="og:video:tag" content="5001">
+  <meta property="og:video:tag" content="هیجان_انگیز">
+  <meta property="og:video:tag" content="ورزش">
+  ```
+
+##### Article/News page
+
+  ```
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://static2.varzesh3.com/files/picture/thumb/00942208.jpg" />
+  <meta property="og:image" content="http://static2.varzesh3.com/files/picture/00942208.jpg" />
+  <meta property="og:article:published_time" content="2017-10-24T18:10:29.7770000" />
+  <meta property="og:article:modified_time" content="2017-10-24T18:08:00.0000000" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:article:section" content="فوتبال" />
+  <meta property="og:article:tag" content="ال کلاسیکو" />
+  <meta property="og:article:tag" content="بارسلونا" />
+  <meta property="og:article:tag" content="رئال مادرید" />
+  ```
+
+#### Schema meta tags
+
+[Schema.org](http://schema.org) is a structured data on the page which helps search engines to gather better information.
     There are many type of content which should have it's specific schema. A complete list of these schemas are listed in [schema.org's documentation page](http://schema.org/docs/full.html)
     
-#### General
+##### General
 
-##### Homepage
- 
+###### Homepage
+
 ```
 <script type="application/ld+json">
 { "@context" : "http://schema.org",
@@ -216,7 +254,7 @@ If the website has *search page*, then you can inform search engine about it and
 
 Notice that the `target` under `potentialAction` is a URL to search result page. So modify it with appropriate `query-input`. 
 
-#### Video
+##### Video
 
 In a page which a single video is shown, the schema is like the following:
 
@@ -260,7 +298,7 @@ In a page which a single video is shown, the schema is like the following:
   </script>
   ```
   
-#### Article, News or blog post
+##### Article, News or blog post
 
 Non-video objects must be based on one of the following schema.org types: [Article](http://schema.org/Article), [NewsArticle](http://schema.org/NewsArticle), [BlogPosting](http://schema.org/BlogPosting).
 
