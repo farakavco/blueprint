@@ -2,8 +2,9 @@
 
 Table Of Content 
 * [Links](#user-content-links)
+* [Paginated pages](#user-content-paginated-pages)
 
-### Links
+## Links
 
 It’s better to include these attributes in every link:
 
@@ -31,8 +32,7 @@ window.opener.window.document.body.innerHtml = 'Some content'
       
       **me**: Use this rel for links to your website’s social media accounts, such as facebook, twitter, … .
 
-
-### Paginated Sections
+## Paginated pages
 
 If you have pages like category pages, tag pages or anything like these which a limited number of items are listed in a page and remaining items are listed in the next other pages, follow these rules:
 
@@ -53,7 +53,7 @@ If you have pages like category pages, tag pages or anything like these which a 
   
     http://example.com/category/helicopter/page/54
 
-    #### Rules
+    ### Rules
 
     First page meta tags:
     ```
