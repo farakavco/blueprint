@@ -204,11 +204,9 @@ After setting required meta tags, it's better for the website to have the follow
 #### Schema meta tags
 
 [Schema.org](http://schema.org) is a structured data on the page which helps search engines to gather better information.
-    There are many type of content which should have it's specific schema. A complete list of these schemas are listed in [schema.org's documentation page](http://schema.org/docs/full.html)
-    
-##### General
+There are many type of content which should have it's specific schema. A complete list of these schemas are listed in [schema.org's documentation page](http://schema.org/docs/full.html)
 
-###### Homepage
+##### Homepage
 
 ```
 <script type="application/ld+json">
@@ -298,6 +296,8 @@ In a page which a single video is shown, the schema is like the following:
   </script>
   ```
   
+  - *interactionCount* is number of video views.
+  
 ##### Article, News or blog post
 
 Non-video objects must be based on one of the following schema.org types: [Article](http://schema.org/Article), [NewsArticle](http://schema.org/NewsArticle), [BlogPosting](http://schema.org/BlogPosting).
@@ -311,7 +311,7 @@ You can use the following *JSON-LD*:
   "@type": "Article",
   "headline": "پخش قسمت جدید فیلم سینمایی فرار از زندان از شبکه سوم سیما",
   "image": "http://farakav.com/assets/uploads/img/prison-break.jpg",
-"keywords": ["television","تلویزیون","شبکه سه","فرار از زندان","سریال فرار از زندان","سری جدید سریال فرار از زندان"],
+  "keywords": ["television","تلویزیون","شبکه سه","فرار از زندان","سریال فرار از زندان","سری جدید سریال فرار از زندان"],
   "datePublished": "2017-09-20T13:39:38Z",
   "articleSection": "entertainment",
   "creator": "حسن فتحی",
