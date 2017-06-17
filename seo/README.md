@@ -351,3 +351,35 @@ If your pages have breadcrumbs, then add following *microdata* to the HTML marku
   </li>
 </ul>
 ```
+
+You can also write it in **JSON** format:
+
+```
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement":
+ [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item":
+   {
+    "@id": "https://example.com/helicopters",
+    "name": "Helicopters"
+    }
+  },
+  {
+   "@type": "ListItem",
+  "position": 2,
+  "item":
+   {
+     "@id": "https://example.com/helicopters/red",
+     "name": "Red helicopters"
+   }
+  }
+ ]
+}
+</script>
+```
