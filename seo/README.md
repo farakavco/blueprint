@@ -6,6 +6,7 @@ Table Of Content
 * [Images](#user-content-images)
 * [Meta tags](#user-content-meta-tags)
   * [Required meta tags](#user-content-required-meta-tags)
+  * [Recommended meta tags](#user-content-recommended-meta-tags)
 
 ## Links
 
@@ -144,7 +145,7 @@ Following meta tags *should* be implemented in every page:
 After setting required meta tags, it's better for the website to have the following meta tags: 
 
 #### OpenGraph
-    [OpenGraph](http://ogp.me/) meta tags can vary page by page and for each content type.
+[OpenGraph](http://ogp.me/) meta tags can vary page by page and for each content type.
     
 ##### General (for mostly all pages)
 
@@ -201,7 +202,7 @@ After setting required meta tags, it's better for the website to have the follow
   <meta property="og:article:tag" content="رئال مادرید" />
   ```
 
-#### Schema meta tags
+#### Schema
 
 [Schema.org](http://schema.org) is a structured data on the page which helps search engines to gather better information.
 There are many type of content which should have it's specific schema. A complete list of these schemas are listed in [schema.org's documentation page](http://schema.org/docs/full.html)
@@ -322,7 +323,7 @@ You can use the following *JSON-LD*:
 </script>
 ```
 
-### Breadcrumb
+#### Breadcrumb
 
 If your pages have breadcrumbs, then add following *microdata* to the HTML markup of them:
  
