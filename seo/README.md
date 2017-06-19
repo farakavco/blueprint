@@ -47,6 +47,13 @@ window.opener.window.document.body.innerHtml = 'Some content'
       
       **me**: Use this rel for links to your website’s social media accounts, such as facebook, twitter, … .
 
+
+**IMPORTANT NOTE** If you have heading elements (`<h1>` or `<h2>` or ... `<h5>`) which should be linked to a page, put the `<a>` element inside the `<hX>`.
+
+**Example**:
+
+- `<h1><a href="http://...." title=".....">some anchor text</a></h1>`
+
 ## Paginated pages
 
 If you have pages like category pages, tag pages or anything like these which a limited number of items are listed in a page and remaining items are listed in the next other pages, follow these rules:
