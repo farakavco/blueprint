@@ -1,1 +1,6 @@
+.DS_Store
+node_modules/
+dist/assets
+dist/index.html
+npm-debug.log
 .idea
