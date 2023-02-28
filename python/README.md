@@ -1,3 +1,7 @@
+Blueprint Django
+================
+* [Django](https://github.com/farakavco/blueprint/tree/master/python/django)
+
 Blueprint Python
 ================
 
