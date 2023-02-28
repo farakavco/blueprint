@@ -8,13 +8,13 @@ Table Of Content
 * [Cross Browser](#user-content-cross-browser)
 * [More Resource](#user-content-more-resource)
 
-###General principles
+### General principles
 * Read [idiomatic-css](https://github.com/farakavco/idiomatic-css#whitespace) Before start writing css file
 * Avoid using "*" selector
 * Avoid Using Element Selector
 * Avoid Using ID selector
 
-###Naming Convention
+### Naming Convention
 
 This approach ensures that everyone who participates in the development of a website works with a single codebase and speaks the same language. Using proper naming will prepare you for the changes in design of the website.
  
@@ -24,7 +24,7 @@ This approach ensures that everyone who participates in the development of a web
  * Using `-` (single dash) for separate worlds
  * Using `--` for separate component name and nested element name
 
-#####Description : 
+##### Description : 
  The concept of what I call Structured Components has proven to be a good one in all of the above named conventions. Structured components consist of the following elements:
 
   * **Components**: A page module that has a certain purpose and is a wrapper for it’s children, in example a modal or a slider can be a component.
@@ -33,7 +33,7 @@ This approach ensures that everyone who participates in the development of a web
   
   * **Modifier**: The state or variant of a component or nested element is modified by user interaction, for example a disabled button.
  
-#####Selector Rules :
+##### Selector Rules :
 
 Select Component
 - .(component-name)
@@ -44,14 +44,14 @@ Select Component With Modifier
 Select Nested Element of Component
 - .(component-name).(modifier-name) .(component-name)--(nested-element-name).(modifier-name)
 
-#####Dom Sample :
+##### Dom Sample :
 
 ```sh
 <div class="component-name big open" >
    <div class="component-name--nested-element" ></div>
 </div>
 ```
-#####Selector Sample :
+##### Selector Sample :
 ```sh
 .message{} /* component  */
 .message.big{} /* component with modifier  */
@@ -60,22 +60,22 @@ Select Nested Element of Component
 
 > *This approach inspired by [smacss](https://smacss.com/) [bem](https://en.bem.info/method/) ans customize for "few rules, more fun"*
 
-###Preprocessor
+### Preprocessor
  
 > Allowed tools for preprocessor is [SASS](http://sass-lang.com/)
 
 * Using .scss format
 * Using [bourbon](http://bourbon.io/) for mixin and other helpers
  
-###Grid System
+### Grid System
 > Allowed grid-system tools for layout implementation is [Bootstrap Grid System](https://github.com/zirafa/bootstrap-grid-only) and [Gridle](http://gridle.org/)
 
 
-###Cross Browser
+### Cross Browser
 
 * [CSS Selector and Pseudo selectors browser compatibility](https://kimblim.dk/css-tests/selectors/)
 * [Can i Use?](http://caniuse.com/)
   
-###More Resource
+### More Resource
 
 * [High-level advice and guidelines for writing sane, manageable, scalable CSS](http://cssguidelin.es/)
